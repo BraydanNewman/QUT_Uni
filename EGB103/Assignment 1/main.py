@@ -64,9 +64,7 @@ if __name__ == "__main__":
     y = [x[1] for x in shortest_path]
     matplotlib.pyplot.scatter(x, y, color="black")
     matplotlib.pyplot.plot(*zip(*shortest_path), color="black")
-    matplotlib.pyplot.scatter(
-        shortest_path[-1][0], shortest_path[-1][1], color="red"
-    )
+    matplotlib.pyplot.scatter(shortest_path[-1][0], shortest_path[-1][1], color="red")
     matplotlib.pyplot.scatter(
         original_start_point[0], original_start_point[1], color="green"
     )
