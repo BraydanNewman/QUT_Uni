@@ -1,3 +1,7 @@
+# ----------------------------
+# TASK 2
+# ----------------------------
+
 USE treasurehunters;
 
 # Query 1
@@ -35,24 +39,67 @@ GROUP BY p.username;
 # Query 6
 SELECT
     s.storeID,
-    storeName,
-    SUM(purchase.cost),
-    purchase.badgeID,
 
-FROM purchase
-RIGHT JOIN store s on s.storeID = purchase.storeID
-RIGHT JOIN player p on p.username = purchase.username
-GROUP BY purchase.storeID;
+    s.storeName,
 
-SELECT *
-FROM purchase
-RIGHT OUTER JOIN player p on p.username = purchase.username
+    COUNT(DISTINCT p.username) AS 'PurchaseC',
 
+    ((SELECT COUNT(player.username) FROM player) - COUNT(DISTINCT p.username)) AS 'NoPurchaseC',
 
+    SUM(cost) AS 'MoneySpent',
 
+    (SELECT p.badgeID HAVING MAX(p.cost)) AS 'MaxB',
 
+    (SELECT p.badgeID HAVING MIN(p.cost)) AS 'MinB',
 
+    AVG(cost) AS AvrageCost
+FROM purchase AS p
+RIGHT JOIN store s on s.storeID = p.storeID
+GROUP BY s.storeID;
 
-#SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
-# FROM Orders
-# INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+# ----------------------------
+# TASK 3
+# ----------------------------
+
+USE treasurehunters;
+
+# Insert
+INSERT INTO badge (badgeName, badgeDescription)
+VALUE ('Summer Rain', 'Beach, sun and holidays');
+
+# Delete
+DELETE FROM playerprogress
+WHERE progress='complete';
+
+# Update
+UPDATE player
+SET streetNumber=72, streetName='Evergreen Terrace', suburb='Springfield'
+WHERE lastName='Halpin';
+# CHECK ADDRESS TOO OR JUST LAST NAME
+
+# Create Index
+CREATE INDEX idx_story
+ON quest (story);
+
+# Create View
+CREATE VIEW Inactive AS
+    SELECT firstName, lastName, creationDateTime
+    FROM player
+    WHERE username IN (
+            SELECT username
+            FROM playerprogress
+            WHERE playerprogress.progress = 'inactive'
+        );
+
+SELECT * FROM Inactive;
+DROP VIEW Inactive;
+
+# ----------------------------
+# TASK 4
+# ----------------------------
+
+USE treasurehunters;
+
+REVOKE INSERT, DELETE ON player FROM 'catie'@'localhost';
+
+GRANT INSERT, DELETE ON quest TO 'manav'@'localhost';
