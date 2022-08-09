@@ -21,6 +21,8 @@ entry:
     // Write assembly code such that when we enable PB5 as an output
     // LED DS1-DP is off.
 
+    ldi r16, PIN5_bm
+    sts PORTB_OUT, r16
 
     // Write your code for Ex 3.0 above this line.
     
@@ -31,6 +33,7 @@ entry:
     // Write assembly code to enable the pin connected to net DISP DP
     // as an output.
 
+    sts PORTB_DIR, r16
 
     // Write your code for Ex 3.1 above this line.
 
@@ -43,6 +46,11 @@ entry:
     // internal pull-up resistors for the pins connected to these
     // pushbuttons.
 
+    ldi r16, PORT_PULLUPEN_bm
+    sts PORTA_PIN4CTRL, r16
+    sts PORTA_PIN5CTRL, r16
+    sts PORTA_PIN6CTRL, r16
+    sts PORTA_PIN7CTRL, r16
 
     // Write your code for Ex 3.2 above this line.
 
@@ -51,6 +59,9 @@ entry:
     // Ex 3.3
     // 
     // Write assembly code to turn on LED DS1-DP
+
+    ldi r16, PIN5_bm
+    sts PORTB_OUTCLR, r16
 
 
     // Write your code for Ex 3.3 above this line.
@@ -72,6 +83,8 @@ loop_100ms:
     // isolate the bit that corresponds to the relevant pushbutton 
     // after reading the port state.
 
+    in r17, VPORTA_IN
+    andi r17, PIN4_bm
 
     // Write your code for Ex 3.4 above this line.
 
@@ -89,10 +102,10 @@ loop_100ms:
     brne end_loop_100ms
     // Write your code for Ex 3.5 below this line.
 
+    sts PORTB_OUTTGL, r16
 
     // Write your code for Ex 3.5 above this line.
 end_loop_100ms:
-
 
 
 // The code between the "loop_10ms" and "end_loop_10ms" labels 
@@ -121,16 +134,28 @@ loop_10ms:
     //
     // You can write your code for Ex 3.6 anywhere below this line
 
+    // Set buzzer as output
+    ldi r20, PIN0_bm
 
+    // Get Button 2 value
+    in r18, VPORTA_IN
+    andi r18, PIN6_bm
+
+    // Check button 2 value
     cpi r18, 0
     brne ex36_nonzero
 
 ex36_zero:
 
+    // If button 2 is pressed
+    // Turn on buzzer
+    sts PORTB_DIRSET, r20
+
     rjmp end_ex36
 
 ex36_nonzero:
 
+    sts PORTB_DIRCLR, r20
 end_ex36:
 
     // You can write your code for Ex 3.6 anywhere above this line
