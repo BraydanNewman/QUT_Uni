@@ -61,8 +61,81 @@ entry:
     //
     // Write your code for Ex E3.0 below this line.
 
+// -------------------------------------
+    // PORTA1 - DISP LATCH
+    // PORTC0 - SPI CLK
+    // PORTC2 - SPI MOSI
 
+// -------------------------------------
+    // Set Pin Bit Masks to Registers
+    ldi r16, PIN2_bm // DISP LATCH
+    ldi r17, PIN0_bm // SPI CLK
+    ldi r18, PIN1_bm // SPI MOSI
+    ldi r19, 0b10010100 // Set Bits to Map to Display
 
+// -------------------------------------
+    // Set all required pins to Safe State
+    // SPI MOSI PIN (PC2) - Safe State (HIGH)
+    sts PORTC_OUTSET, r16
+
+    // SPI CLK (PC0) - Safe State (HIGH)
+    sts PORTC_OUTSET, r17
+
+    // DISP LATCH (PA1) - Safe State (HIGH)
+    sts PORTA_OUTSET, r18
+
+// -------------------------------------
+    // Set all required pins to Output
+    // SPI MOSI PIN (PC2)
+    sts PORTC_DIRSET, r16
+
+    // SPI CLK (PC0)
+    sts PORTC_DIRSET, r17
+
+    // DISP LATCH (PA1)
+    sts PORTA_DIRSET, r18
+
+// -------------------------------------
+    // STEP 1 (SPI MOSI)
+    // Set Pin High
+    sts PORTC_OUTCLR, r16
+
+// -------------------------------------
+    // STEP 2
+    ldi r21, 8
+    output_loop:
+        dec r21
+        sts PORTC_OUTCLR, r17
+        mov r24, r19
+        mov r22, r21
+        shift_loop:
+            cpi r22, 0
+            breq shift_finished
+            lsr r24
+            dec r22
+            rjmp shift_loop
+        shift_finished:
+        andi r24,0x01
+        cpi r24, 0x01
+        brne condition_0
+            sts PORTC_OUTCLR, r16
+        rjmp end_condition
+        condition_0:
+            sts PORTC_OUTSET, r16
+        end_condition:
+        sts PORTC_OUTSET, r17
+        cpi r21, 0
+        brne output_loop
+
+// -------------------------------------
+    // STEP 3 (DISP LATCH)
+    // Pulse Latch High to Enable Outputs
+    // Set Pin Low Then High
+    sts PORTA_OUTCLR, r18
+    sts PORTA_OUTSET, r18
+    sts PORTA_OUTCLR, r18 // Set back to low to be safe
+
+// -------------------------------------
     // Write your code for Ex E3.0 above this line.
 
 // END OF EXTENSION03 EXERCISES //
