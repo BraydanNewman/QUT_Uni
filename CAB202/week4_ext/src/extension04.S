@@ -55,7 +55,7 @@ entry:
     // Initsalize Display and Button
     rcall display_raw_init
     ldi r16, PORT_PULLUPEN_bm
-    sts PORTA_PIN5CTRL, r16
+    sts PORTA_PIN4CTRL, r16
 
     // Student Number: 11272031
     ldi r16, 0b00111110 // 1
@@ -80,7 +80,7 @@ entry:
     // Main Loop
     main:
         in r17, VPORTA_IN
-        andi r17, PIN5_bm
+        andi r17, PIN4_bm
         cpi r17, 0
         breq button_pressed
         rjmp button_exit
