@@ -135,13 +135,10 @@ int main(void) {
     // positions and store the result in "beta". Once these calculations are
     // complete, uncomment the printf(..) statement below.
 
-    uint16_t alpha = X * Y;
-    uint16_t beta = alpha << 1;
+    int16_t alpha = X * Y;
+    int16_t beta = alpha << 1;
     if (alpha < 0) {
-//        Negative
-//arithmetic right shift by four
         beta = alpha >> 4;
-
     }
 
     // Write your code for Ex 5.5 above this line. Uncomment the line below when complete.
