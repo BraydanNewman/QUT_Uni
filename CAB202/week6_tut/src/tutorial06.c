@@ -158,9 +158,7 @@ int main(void) {
     //
     // Tip: Recall that we can use the name of an array like a pointer.
 
-    for (uint8_t i = 0; i < 64; i++) {
-        descramble(&scrambled[i]);
-    }
+    for (uint8_t i = 0; i < sizeof(scrambled); i++) descramble(&scrambled[i]);
 
     // Write your code for Ex 6.4 above this line. 
 
