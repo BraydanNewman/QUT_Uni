@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 
 // Ex E6.0
 // 
@@ -96,10 +97,41 @@
 
 
 
-void matrix_add(int16_t* a, int16_t* da, int16_t adder, int16_t* r){
-    for (uint8_t i = 0; i < da[0]; i++){
-        for (uint8_t j = 0; j < da[1]; j++){
+void matrix_add(int16_t* matrix, int8_t* dim, int16_t add, int16_t* result){
+    for (uint8_t i = 0; i < dim[0]; i++) {
+        for (uint8_t j = 0; j < dim[1]; j++) {
+            *(result+i *dim[1]+j) = *(matrix+i *dim[1]+j) + add;
+        }
+    }
+}
 
+void matrix_scale(int16_t* matrix, int8_t* dim, int16_t scalar, int16_t* result){
+    for (uint8_t i = 0; i < dim[0]; i++) {
+        for (uint8_t j = 0; j < dim[1]; j++) {
+            *(result+i *dim[1]+j) = *(matrix+i *dim[1]+j) * scalar;
+        }
+    }
+}
+
+void matrix_sum(int16_t* matrix, int8_t* dim, int16_t* identity, int16_t* result){
+    for (uint8_t i = 0; i < dim[0]; i++) {
+        for (uint8_t j = 0; j < dim[1]; j++) {
+            *(result+i *dim[1]+j) = *(matrix+i *dim[1]+j) + *(identity+i *dim[1]+j);
+        }
+    }
+}
+
+// [ 1 2 ] * [ 1 2 3 ] = [ (1*1 + 2*4)  (1*2 + 2*5)  (1*3 + 2*6) ] = [  9 12 15 ]
+// [ 3 4 ]   [ 4 5 6 ]   [ (3*1 + 4*4)  (3*2 + 4*5)  (3*3 + 4*6) ]   [ 19 26 33 ]
+
+void matrix_mul(int16_t* matrix1, int8_t* dim1, int16_t* matrix2, int8_t* dim2, int16_t* result){
+    for (uint8_t i = 0; i < dim1[0]; i++) {
+        for (uint8_t j = 0; j < dim2[1]; j++) {
+            *(result+ i*dim2[1] +j) = 0;
+            for (uint8_t k = 0; k < dim1[1]; k++){
+                *(result+ i*dim2[1] +j) += *(matrix1+ (i*dim2[1])+k) * *(matrix2+ j+(k*dim2[1]));
+//                *(result+ i *dim2[1]+j) += *(matrix1+ i *dim1[0]+k) * *(matrix2+ k +j);
+            }
         }
     }
 }

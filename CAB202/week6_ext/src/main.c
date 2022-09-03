@@ -80,30 +80,28 @@ int main(void) {
     matrix_print(b, dim_2x3);
 
     printf("\n");
-    printf("%d", addend);
-    printf("\n");
     matrix_zero(result, 6);
     matrix_add(a, dim_2x2, addend, result);
     matrix_print(result, dim_2x2);
 
     printf("\n");
     matrix_zero(result, 6);
-    //matrix_sum(a, dim_2x2, identity, result);
+    matrix_sum(a, dim_2x2, identity, result);
     matrix_print(result, dim_2x2);
 
     printf("\n");
     matrix_zero(result, 6);
-    //matrix_scale(a, dim_2x2, multiplicand, result);
+    matrix_scale(a, dim_2x2, multiplicand, result);
     matrix_print(result, dim_2x2);
 
     printf("\n");
     matrix_zero(result, 6);
-    //matrix_mul(identity, dim_2x2, a, dim_2x2, result);
+    matrix_mul(identity, dim_2x2, a, dim_2x2, result);
     matrix_print(result, dim_2x2);
 
     printf("\n");
     matrix_zero(result, 6);
-    //matrix_mul(identity, dim_2x2, b, dim_2x3, result);
+    matrix_mul(identity, dim_2x2, b, dim_2x3, result);
     matrix_print(result, dim_2x3);
 
     while (1); // Trap programme execution here    
