@@ -129,7 +129,7 @@ void matrix_mul(int16_t* matrix1, int8_t* dim1, int16_t* matrix2, int8_t* dim2, 
         for (uint8_t j = 0; j < dim2[1]; j++) {
             *(result+ i*dim2[1] +j) = 0;
             for (uint8_t k = 0; k < dim1[1]; k++){
-                *(result+ i*dim2[1] +j) += *(matrix1+ (i*dim2[1])+k) * *(matrix2+ j+(k*dim2[1]));
+                *(result+ i*dim2[1] +j) += *(result+ i * dim1[1] + k) * *(result+ k * dim2[1] + j);
 //                *(result+ i *dim2[1]+j) += *(matrix1+ i *dim1[0]+k) * *(matrix2+ k +j);
             }
         }
