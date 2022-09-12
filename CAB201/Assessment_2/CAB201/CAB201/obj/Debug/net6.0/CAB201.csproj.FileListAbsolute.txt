@@ -1,0 +1,15 @@
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.csproj.AssemblyReference.cache
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.GeneratedMSBuildEditorConfig.editorconfig
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.AssemblyInfoInputs.cache
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.AssemblyInfo.cs
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.csproj.CoreCompileInputs.cache
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/bin/Debug/net6.0/CAB201
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/bin/Debug/net6.0/CAB201.deps.json
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/bin/Debug/net6.0/CAB201.runtimeconfig.json
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/bin/Debug/net6.0/CAB201.dll
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/bin/Debug/net6.0/ref/CAB201.dll
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/bin/Debug/net6.0/CAB201.pdb
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.dll
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/ref/CAB201.dll
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.pdb
+/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/obj/Debug/net6.0/CAB201.genruntimeconfig.cache

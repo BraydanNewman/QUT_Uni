@@ -68,7 +68,7 @@ int main(void) {
     // Buzzer Set Up
     PORTB_OUTSET = PIN0_bm;
     PORTB_DIRSET = PIN0_bm;
-    
+
     cli(); // Disable Interrupt Globally
     TCB0.CTRLB = TCB_CNTMODE_INT_gc; // Set Interrupt mode
     TCB0.CCMP = 404; // Set Interval
