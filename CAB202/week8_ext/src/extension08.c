@@ -71,7 +71,7 @@ void init(void) {
     TCB0.INTCTRL |= 0x1;
     TCB0.CTRLA = TCB_CLKSEL_DIV2_gc | TCB_ENABLE_bm;
 
-//    f2();
+    f2();
     sei();
 
 
