@@ -76,22 +76,7 @@ int main(void) {
     printf("Start2\n");
     for (uint16_t i = 0; i < 10; i++) test(&B64_RESULT[i]);
 
-//    printf("Start3\n");
-//    for (uint16_t i = 0; i < sizeof(B64_RESULT); i = i + 3) {
-//        printf("%X\t", B64_RESULT[i]);
-//        printf("%X\t", B64_RESULT[i + 1]);
-//        printf("%X\t", B64_RESULT[i + 2]);
-//        printf("\n");
-//    }
 
-//    printf("%X\n", B64_RESULT[0]);
-//    printf("%X\n", B64_RESULT[1]);
-//    printf("%X\n", B64_RESULT[2]);
-//    printf("\n");
-//    printf("%X\n", B64_RESULT[3]);
-//    printf("%X\n", B64_RESULT[4]);
-//    printf("%X\n", B64_RESULT[5]);
-//    printf("\n");
 
 
     while (1) {}

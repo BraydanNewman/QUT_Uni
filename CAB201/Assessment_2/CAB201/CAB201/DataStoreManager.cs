@@ -3,11 +3,11 @@ using System.Text;
 
 namespace CAB201;
 
-public class DataStoreManager
+public abstract class DataStoreManager
 {
     public static string EncodeTo64(string? toEncode)
     {
-        var toEncodeAsBytes = Encoding.ASCII.GetBytes(toEncode);
+        var toEncodeAsBytes = Encoding.ASCII.GetBytes(toEncode!);
         return Convert.ToBase64String(toEncodeAsBytes);
     }
     
@@ -48,6 +48,8 @@ public class UserManager : DataStoreManager
 {
     private const string DataFile = "user.csv";
     private List<User> Users { get; set; } = new List<User>();
+    
+    public User? CurrentUser { get; private set; }
 
     public void LoadData()
     {
@@ -84,6 +86,14 @@ public class UserManager : DataStoreManager
         }
         AppendData(data, DataFile);
     }
-    
-    
+
+    public bool UserLogin(string? email, string? password)
+    {
+        var selectedUsers = this.Users.Where(p => p.Email == email).ToArray();
+        if (selectedUsers.Count() != 1) return false;
+        var selectedUser = selectedUsers[0];
+        if (selectedUser.Password != password) return false;
+        this.CurrentUser = selectedUser;
+        return true;
+    }
 }

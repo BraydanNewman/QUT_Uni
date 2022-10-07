@@ -1,4 +1,5 @@
-﻿using System.IO.Compression;
+﻿using System.Diagnostics;
+using System.IO.Compression;
 namespace CAB201
 {
     public class Program
@@ -7,6 +8,10 @@ namespace CAB201
         
         public static void Main(string[] args)
         {
+            Console.WriteLine("+------------------------------+\n" +
+                              "| Welcome to the Auction House |\n" +
+                              "+------------------------------+");
+            
             Users.LoadData();
 
             var exit = false;
@@ -38,20 +43,44 @@ namespace CAB201
         }
 
 
-        public static void SignIn()
+        private static void SignIn()
         {
+            Console.WriteLine("Sign In\n" +
+                              "-------\n");
             
+            Console.WriteLine("Please enter your email address");
+            Console.Write("> ");
+            var email = Console.ReadLine();
+            
+            Console.WriteLine("Please enter your password");
+            Console.Write("> ");
+            var password = Console.ReadLine();
+
+            if (!Users.UserLogin(email, password))
+            {
+                Console.WriteLine("Incorrect email or password");
+                return;
+            }
+
+            var output = $"Personal Details for {Users.CurrentUser?.Name}({Users.CurrentUser?.Email})";
+            Console.WriteLine(output);
+            Console.WriteLine(new string('-', output.Length));
+            
+            if (Users.CurrentUser != null) Users.CurrentUser.Address = GetAddress();
+
+            ClientMenu();
         }
 
-        public static void ClientMenu()
+        private static void ClientMenu()
         {
-            Console.Clear();
-            Console.WriteLine("ClientMenu:\n" +
-                              "1) Advertisements\n" +
-                              "2) Product List\n" +
-                              "3) Bid on Product List\n" +
-                              "4) Search\n" +
-                              "5) Purchased Products");
+            Console.WriteLine("Client Menu\n" +
+                              "-----------\n" +
+                              "(1) Advertise Product\n" +
+                              "(2) View My Product List\n" +
+                              "(3) Search For Advertised Products\n" +
+                              "(4) View Bids On My Products\n" +
+                              "(5) View My Purchased Items\n" +
+                              "(6) Log off");
             Console.Write("> ");
 
 
@@ -61,43 +90,170 @@ namespace CAB201
         {
             Console.WriteLine("Registration");
             Console.WriteLine("------------\n");
+            
+            var name = GetName();
+            var email = GetEmail();
+            var password = GetPassword();
 
+            Console.WriteLine($"\nClient Trader {name}({email}) has successfully registers at the Auction House.\n");
+            Users.AddUser(name, email, password);
+        }
+        
+        private static Address GetAddress()
+        {
+            Console.WriteLine("Please provide your home address.");
 
-            // Name Validation
-            var name = "";
-            var validInput = false;
-            while (!validInput)
+            var unitNumber = GetUnitNum();
+            var streetNumber = GetStreetNum();
+            var streetName = GetStreetName();
+            var streetSuffix = GetStreetSuffix();
+            var cityName = GetCityName();
+            var state = GetState();
+            var postcode = GetPostcode();
+            
+            return new Address(
+                unitNumber, 
+                streetNumber, 
+                streetName, 
+                streetSuffix, 
+                cityName, 
+                state, 
+                postcode
+                );
+        }
+
+        private static string GetState()
+        {
+            while (true)
+            {
+                Console.WriteLine("State (ACT, NSW, NT, QLD, SA, TAS, VIC, WA):");
+                Console.Write("> ");
+                var state = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(state) && DataValidation.StateValidation(state)) return state;
+                Console.WriteLine("Invalid State or territory");
+
+            }
+        }
+
+        private static int GetPostcode()
+        {
+            while (true)
+            {
+                Console.WriteLine("Postcode (1000 .. 9999):");
+                Console.Write("> ");
+                var postcode = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(postcode) &&
+                    DataValidation.PositiveNonZeroIntegerValidation(postcode) &&
+                    int.Parse(postcode) >= 1000 &&
+                    int.Parse(postcode) <= 9999) return int.Parse(postcode);
+                Console.WriteLine("Invalid postcode");
+            }
+        }
+
+        private static string GetStreetSuffix()
+        {
+            while (true)
+            {
+                Console.WriteLine("Street suffix:");
+                Console.Write("> ");
+                var suffix = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(suffix) && DataValidation.StreetSuffixValidation(suffix)) return suffix;
+                
+                Console.WriteLine("Invalid street suffix");
+            }
+        }
+        // TODO: Combined the get input functions into  a generic function
+        // Like GetCityName and GetStreetName 
+        private static string GetCityName()
+        {
+            while (true)
+            {
+                Console.WriteLine("City:");
+                Console.Write("> ");
+                var name = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(name)) return name;
+                Console.WriteLine("City name can't be empty");
+            }
+        }        
+        
+        private static string GetStreetName()
+        {
+            while (true)
+            {
+                Console.WriteLine("Street name:");
+                Console.Write("> ");
+                var name = Console.ReadLine();
+
+                if (!string.IsNullOrWhiteSpace(name)) return name;
+                Console.WriteLine("Street name can't be empty");
+            }
+        }
+
+        private static int GetStreetNum()
+        {
+            while (true)
+            {
+                Console.WriteLine("Street number:");
+                Console.Write("> ");
+                var number = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(number) &&
+                    DataValidation.PositiveNonZeroIntegerValidation(number)) return int.Parse(number);
+                Console.WriteLine("Unit Number must be a Positive Non Zero Integer");
+            }
+        }
+
+        private static int? GetUnitNum()
+        {
+            while (true)
+            {
+                Console.WriteLine("Unit number (0 = none):");
+                Console.Write("> ");
+                var number = Console.ReadLine();
+                if (number == "0") return null;
+
+                if (!string.IsNullOrWhiteSpace(number) &&
+                    DataValidation.PositiveNonZeroIntegerValidation(number)) return int.Parse(number);
+                Console.WriteLine("Unit Number must be a Positive Non Zero Integer");
+            }
+        }
+
+        private static string GetName()
+        {
+            while (true)
             {
                 Console.WriteLine("Please enter your name");
                 Console.Write("> ");
-                name = Console.ReadLine();
-                if (!string.IsNullOrEmpty(name)) validInput = true;
+                var name = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(name)) return name;
+                Console.WriteLine("\tName can't be Empty");
             }
-
-            // Email Validation
-            var email = "";
-            validInput = false;
-            while (!validInput)
+        }
+        
+        private static string GetEmail()
+        {
+            while (true)
             {
                 Console.WriteLine("Please enter your email address");
                 Console.Write("> ");
-                email = Console.ReadLine();
-
-                if (!DataValidation.EmailValidation(email))
+                var email = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(email) || !DataValidation.EmailValidation(email))
                 {
                     Console.WriteLine("\tThe supplied address is not a valid name.");
+                    continue;
                 }
-                else if (Users.CheckEmailExists(email))
-                {
-                    Console.WriteLine("\tThe supplied address is already in use.");
-                }
-                else validInput = true;
+
+                if (!Users.CheckEmailExists(email)) return email;
+                Console.WriteLine("\tThe supplied address is already in use.");
             }
-            
-            // Password Validation 
-            var password = "";
-            validInput = false;
-            while (!validInput)
+        }
+
+        private static string GetPassword()
+        {
+            while (true)
             {
                 Console.WriteLine("Please choose a password");
                 Console.WriteLine("* At least 8 characters\n" +
@@ -107,22 +263,12 @@ namespace CAB201
                                   "* At least one digit\n" +
                                   "* At least one special character\n");
                 Console.Write("> ");
+                var password = Console.ReadLine();
 
-                password = Console.ReadLine();
-
-                if (!DataValidation.PasswordValidation(password))
-                {
-                    Console.WriteLine("The supplied value is not a valid password");
-                }
-                else
-                {
-                    validInput = true;
-                }
+                if (!string.IsNullOrWhiteSpace(password) && DataValidation.PasswordValidation(password))
+                    return password;
+                Console.WriteLine("The supplied value is not a valid password");
             }
-            
-            Console.WriteLine($"\nClient Trader {name}({email}) has successfully registers at the Auction House.\n");
-            Users.AddUser(name, email, password);
         }
-
     }
 }
