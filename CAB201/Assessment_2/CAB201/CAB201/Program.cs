@@ -66,24 +66,51 @@ namespace CAB201
             Console.WriteLine(output);
             Console.WriteLine(new string('-', output.Length));
             
-            if (Users.CurrentUser != null) Users.CurrentUser.Address = GetAddress();
+            if (Users.CurrentUser!.Address != null) Users.CurrentUser.Address = GetAddress();
 
             ClientMenu();
         }
 
         private static void ClientMenu()
         {
-            Console.WriteLine("Client Menu\n" +
-                              "-----------\n" +
-                              "(1) Advertise Product\n" +
-                              "(2) View My Product List\n" +
-                              "(3) Search For Advertised Products\n" +
-                              "(4) View Bids On My Products\n" +
-                              "(5) View My Purchased Items\n" +
-                              "(6) Log off");
-            Console.Write("> ");
+            var exit = false;
+            while (!exit)
+            {
+                Console.WriteLine("Client Menu\n" +
+                                  "-----------\n" +
+                                  "(1) Advertise Product\n" +
+                                  "(2) View My Product List\n" +
+                                  "(3) Search For Advertised Products\n" +
+                                  "(4) View Bids On My Products\n" +
+                                  "(5) View My Purchased Items\n" +
+                                  "(6) Log off");
+                Console.Write("> ");
+                var userInput = Console.ReadLine();
 
+                switch (userInput)
+                {
+                    case "1":
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        Logout();
+                        exit = true;
+                        break;
+                    
+                }
+            }
+        }
 
+        private static void Logout()
+        {
+            Users.LogoutUser();
         }
 
         private static void Register()
@@ -165,7 +192,7 @@ namespace CAB201
                 Console.WriteLine("Invalid street suffix");
             }
         }
-        // TODO: Combined the get input functions into  a generic function
+        // TODO: Combined the get input functions into  a generic function maybe
         // Like GetCityName and GetStreetName 
         private static string GetCityName()
         {

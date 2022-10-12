@@ -5,13 +5,13 @@ namespace CAB201;
 
 public abstract class DataStoreManager
 {
-    public static string EncodeTo64(string? toEncode)
+    protected static string EncodeTo64(string? toEncode)
     {
         var toEncodeAsBytes = Encoding.ASCII.GetBytes(toEncode!);
         return Convert.ToBase64String(toEncodeAsBytes);
     }
-    
-    public static string DecodeFrom64(string encodedData)
+
+    protected static string DecodeFrom64(string encodedData)
     {
         var encodedDataAsBytes = Convert.FromBase64String(encodedData);
         return Encoding.ASCII.GetString(encodedDataAsBytes);
@@ -67,7 +67,7 @@ public class UserManager : DataStoreManager
         return (this.Users.Count(p => string.Equals(p.Email, email)) > 0);
     }
 
-    public void AddUser(string? name, string? email, string? password)
+    public void AddUser(string name, string email, string password)
     {
         this.Users.Add(new User(name, email, password));
     }
@@ -95,5 +95,10 @@ public class UserManager : DataStoreManager
         if (selectedUser.Password != password) return false;
         this.CurrentUser = selectedUser;
         return true;
+    }
+
+    public void LogoutUser()
+    {
+        this.CurrentUser = null;
     }
 }
