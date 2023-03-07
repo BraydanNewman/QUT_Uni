@@ -1,0 +1,11 @@
+{
+  "name": "week_1",
+  "version": "1.0.0",
+  "description": "fuck",
+  "main": "index.js",
+  "scripts": {
+    "run": "/home/phreaked/PycharmProjects/QUT_Uni/CAB230/week_1/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

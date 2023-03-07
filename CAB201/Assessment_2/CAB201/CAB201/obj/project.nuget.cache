@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VjMcD0LuJig8erSJyHpiJXfxpY9HjHFtR402OsgYGtLU7PF1kh7XeStc8J8tV72dn8LCo/ytmIUtSdKHiNh+UQ==",
+  "dgSpecHash": "3vEHw0Vvg6Pae5/N8q9xCxoepLAMKOqGt55mcnktZUFVlAy/pkQrW6w/u62MAaHlZSXX6byrnhRv1wDfho3clw==",
   "success": true,
   "projectFilePath": "/home/phreaked/PycharmProjects/QUT_Uni/CAB201/Assessment_2/CAB201/CAB201/CAB201.csproj",
   "expectedPackageFiles": [
-    "/home/phreaked/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.9/microsoft.aspnetcore.app.ref.6.0.9.nupkg.sha512"
+    "/home/phreaked/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.10/microsoft.aspnetcore.app.ref.6.0.10.nupkg.sha512"
   ],
   "logs": []
 }

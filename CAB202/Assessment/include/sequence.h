@@ -11,6 +11,7 @@
 char const TEST_BASE64[] PROGMEM = "MUSi";
 char const BIG_TEST_BASE64[] PROGMEM = "hhhh";
 uint8_t TEST_SCRAMBLED[3] = { 0x31, 0x44, 0xA2 };
+
 char const SEQUENCE[] PROGMEM = "\
 EUSiwTSa3TomWimMYDJd1Gi0ym2ufea7IU7vixtRZLoVUjmEcDAjhEYjybpmdjlA\
 MBCzwOLKIJLJMBw1jx8VfWb3Dd6so4nZ7GYI1T4kwzVGI036feJx5PL5oNDodLrd\

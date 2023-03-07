@@ -1,3 +1,5 @@
+#include "uart.h"
+
 /***
  * Ex E11.0
  * 
@@ -34,7 +36,83 @@
  *     0
  */
 
+typedef enum {
+    NONE,
+    F,
+    FO,
+    FOO,
+    B,
+    BA,
+    BAR,
+}states;
+
+states state = NONE;
+
+
 int main(void) {
+    uart_init();
+
+    uint8_t foobarCheck = 0;
+    uint8_t bCount = 0;
+
+    uint8_t input;
+
+    while(1) {
+        input = uart_getc();
+
+        if(input == 'f') state = F;
+        if(input == 'b') state = B;
+
+        switch (state) {
+            case F:
+                state = FO;
+                foobarCheck = 0;
+                break;
+            case B:
+                if(bCount == 1 && foobarCheck == 1) {
+                    uart_putc('0');
+                    foobarCheck = 0;
+                }
+                bCount = 1;
+                state = BA;
+                break;
+
+            case FO:
+                if (input == 'o') state = FOO;
+                else state = NONE;
+                break;
+            case FOO:
+                if (input == 'o') {
+                    foobarCheck = 1;
+                }
+                state = NONE;
+                break;
+            case BA:
+
+                if(input == 'a') {
+                    state = BAR;
+                    bCount = 0;
+                }
+                else {
+                    state = NONE;
+                    if(foobarCheck == 1) {
+                        uart_putc('0');
+                        foobarCheck = 0;
+                    }
+                }
+                break;
+            case BAR:
+                if(input == 'r') {
+                    if (foobarCheck == 1) uart_putc('\n');
+                    else uart_putc('1');
+                } else if (foobarCheck == 1) uart_putc('0');
+                state = NONE;
+            default:
+                foobarCheck = 0;
+                break;
+
+        }
+    }
 
 
-} // end main()
+}

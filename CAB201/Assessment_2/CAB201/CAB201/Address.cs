@@ -3,14 +3,14 @@ namespace CAB201;
 public class Address
 {
     public Address(
-        int? unitNumber, 
-        int streetNumber, 
-        string streetName, 
-        string streetSuffix, 
-        string cityName, 
-        string state, 
+        int? unitNumber,
+        int streetNumber,
+        string streetName,
+        string streetSuffix,
+        string cityName,
+        string state,
         int postcode
-        )
+    )
     {
         UnitNumber = unitNumber;
         StreetNumber = streetNumber;
@@ -28,6 +28,4 @@ public class Address
     public string CityName { get; set; }
     public string State { get; set; }
     public int Postcode { get; set; }
-    
-    
 }
