@@ -1,0 +1,164 @@
+:root {
+    --colour-primary: #0c0032;
+    --colour-secondary: #190061;
+    --colour-3: #240090;
+    --colour-4: #3500d3;
+    --colour-5: #282828;
+}
+
+.agGridMods {
+
+}
+
+
+.container {
+    color: white;
+}
+
+.inputForm {
+    color: white;
+    border-radius: 1em;
+    background: var(--colour-secondary);
+    padding: 1em;
+    margin: 2em;
+}
+
+input[type=text] {
+    text-align: center;
+    color: white;
+    padding: 1em;
+    border: 2px solid var(--colour-primary);
+    background: var(--colour-5);
+}
+
+input[type=text]:focus {
+    color: white;
+    background: var(--colour-5);
+}
+
+select {
+    border: 2px solid var(--colour-primary);
+    color: white;
+    border-radius: 1em;
+    background: var(--colour-5);
+    padding: 1em;
+
+}
+
+
+.button {
+    padding: 1em;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 2em;
+    background: var(--colour-3);
+}
+
+.button:hover {
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.container {
+    padding: 1em 1em 10em 1em;
+}
+
+.nav-link {
+    color: white;
+}
+
+.contrast-icon {
+    color: var(--colour-4);
+
+}
+
+.card {
+    height: 100%;
+    background: var(--colour-secondary);
+}
+
+.card-title {
+    font-size: x-large;
+}
+
+
+.navbar {
+    background: black;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 6px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--colour-4), rgba(0, 0, 0, 0)) 100;
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+nav {
+    color: white;
+}
+
+.errorLabel {
+    color: red;
+}
+
+.genreLabel {
+    border-radius: 1em;
+    margin: 5px;
+    padding: 5px;
+    border: black 1px solid;
+}
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Bruno Ace SC', cursive;
+    background-image: linear-gradient(black, var(--colour-primary));
+    margin: 0;
+
+}
+
+#root {
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: small;
+    background: black;
+    border-left: 0;
+    border-right: 0;
+    border-top: 6px;
+    border-bottom: 0;
+    border-style: solid;
+    border-image: linear-gradient(to left, var(--colour-4), rgba(0, 0, 0, 0)) 100;
+}
+
