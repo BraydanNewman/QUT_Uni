@@ -12,28 +12,19 @@ void enterValuesIntoExistingArray(); //Function to add values into an existing a
 
 int main(int argc, char *argv[]) {
     int numElements = 0;
-    int *arrOnePtr; //There requirement for this program is a single array - there is no need to create a second array
-    // ask user to determine the array size
+    int *arrOnePtr;
     printf("Enter Number of elements in array:");
     scanf("%d", &numElements);
-
-    //allocate sufficient memory and check memory allocation is successful
     arrOnePtr = malloc(numElements * sizeof(int));
     if(arrOnePtr == NULL) {
-        free(arrOnePtr);
-        return 1;
+        printf("Error! memory not allocated.");
+        exit(0);
     }
-
-    // Enter values into the array and then print out the array values
     enterValuesIntoArr(arrOnePtr, numElements);
-
     printOutArray(arrOnePtr, numElements);
-    //Call function to prompt user to increase array size
     int newSize = askUserToIncreaseArraySize(arrOnePtr, numElements);
-    //Populate the resized array with additional values
     enterValuesIntoExistingArray(arrOnePtr, newSize, numElements);
     numElements = newSize;
-    //print out array - should contain values from initial creation and values entered after array is resized.
     printOutArray(arrOnePtr, numElements);
     return 0;
 }
@@ -41,7 +32,7 @@ int main(int argc, char *argv[]) {
 // Function to add additional elements to a pre-existing array - the inital values stored in the array are preserved
 void enterValuesIntoExistingArray(int *ptr, int newLength, int oriLength) {
     int element;
-    for (int i = 0; i < newLength - oriLength; ++i) {
+    for (int i = oriLength; i < newLength; ++i) {
         printf("Enter Value %d in array:", oriLength + i);
         scanf("%d", &element);
         ptr[i] = element;
@@ -54,9 +45,8 @@ int askUserToIncreaseArraySize(int *ptr, int length) {
     scanf("%d", &additionalElements);
     int* newPtr = realloc(ptr, (length + additionalElements) * sizeof(int));
     if(newPtr == NULL) {
-        free(newPtr);
-        free(ptr);
-        return 1;
+        printf("Error! memory not allocated.");
+        exit(0);
     }
     ptr = newPtr;
     return length + additionalElements;
