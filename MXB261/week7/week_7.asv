@@ -1,0 +1,23 @@
+simulations = 500;
+grid_size = 200;
+number_of_particals = 100;
+steps = 2000;
+particals_pos = randi([1, grid_size], number_of_particals, 2);
+
+data_simulation = zeros(steps + 1, simulations);
+
+for i = 1:simulations
+    data_simulations(:, i) = randomWalk(steps, particals_pos, number_of_particals, grid_size);
+end
+
+%%
+figure, plot(data_simulations(:, 1), "LineWidth", 2)
+
+%%
+figure, plot(data_simulations(:, 1:50), "LineWidth", 2)
+
+%%
+figure, plot(data_simulations(:, :), "LineWidth", 2)
+
+%%
+figure, plot(mean(data_simulation), 'LineStyle', 2)
