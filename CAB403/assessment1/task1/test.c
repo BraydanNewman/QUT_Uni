@@ -109,8 +109,6 @@ int main( void ) {
     // Initialise vector, add some data.
     dv_init( &vec1 );
 
-//    insert_print( &vec1, 0, next_rand() ); ln();
-
 
     for ( int i = 0; i < 10; i++ ) {
         push_print( &vec1, next_rand() );
