@@ -56,7 +56,7 @@ char* op_names[] = {
  */
 bool create_shared_object( shared_memory_t* shm, const char* share_name ) {
     // Remove any previous instance of the shared memory object, if it exists.
-    if (shm != NULL) shm_unlink(shm->name);
+    if (shm != NULL) shm_unlink(share_name);
 
     // Assign share name to shm->name.
     shm->name = share_name;
@@ -65,7 +65,7 @@ bool create_shared_object( shared_memory_t* shm, const char* share_name ) {
     // resulting file descriptor in shm->fd. If creation failed, ensure
     // that shm->data is NULL and return false.
 
-    shm->fd = shm_open(shm->name, O_CREAT | O_EXCL | O_RDWR, 0777);
+    shm->fd = shm_open(shm->name, O_CREAT | O_RDWR, 438);
     if (shm->fd == -1) {
         shm->data = NULL;
         return false;
@@ -80,7 +80,7 @@ bool create_shared_object( shared_memory_t* shm, const char* share_name ) {
 
     // Otherwise, attempt to map the shared memory via mmap, and save the address
     // in shm->data. If mapping fails, return false.
-    shm->data = mmap(0, sizeof(shared_data_t), PROT_WRITE, MAP_SHARED, shm->fd, 0);
+    shm->data = mmap(0, sizeof(shared_data_t), PROT_READ | PROT_WRITE, MAP_SHARED, shm->fd, 0);
     if (shm->data == MAP_FAILED) return false;
 
     // Do not alter the following semaphore initialisation code.
@@ -108,7 +108,10 @@ bool create_shared_object( shared_memory_t* shm, const char* share_name ) {
  */
 void destroy_shared_object( shared_memory_t* shm ) {
     // Remove the shared memory object.
-    // INSERT SOLUTION HERE
+    munmap(shm->data, sizeof(shared_data_t));
+    shm_unlink(shm->name);
+    shm->fd = -1;
+    shm->data = NULL;
 }
 
 /**
@@ -135,6 +138,10 @@ void destroy_shared_object( shared_memory_t* shm ) {
 double request_work( shared_memory_t* shm, operation_t op, double lhs, double rhs ) {
     // Copy the supplied values of op, lhs and rhs into the corresponding fields
     // of the shared data object.
+    shm->data->operation = op;
+    shm->data->lhs = lhs;
+    shm->data->rhs = rhs;
+
 
     // Do not alter the following semaphore code. It sends the request to the
     // worker, and waits for the response in a reliable manner.
@@ -144,7 +151,7 @@ double request_work( shared_memory_t* shm, operation_t op, double lhs, double rh
     // Modify the following line to make the function return the result computed
     // by the worker process. This will be stored in the result field of the
     // shared data object.
-    return 0;
+    return shm->data->result;
 }
 
 /**
@@ -168,12 +175,15 @@ bool get_shared_object( shared_memory_t* shm, const char* share_name ) {
     // Get a file descriptor connected to shared memory object and save in
     // shm->fd. If the operation fails, ensure that shm->data is
     // NULL and return false.
-    // INSERT SOLUTION HERE
-
+    shm->fd = shm_open(share_name, O_RDWR, 438);
+    if (shm->fd == -1) {
+        shm->data = NULL;
+        return false;
+    }
     // Otherwise, attempt to map the shared memory via mmap, and save the address
     // in shm->data. If mapping fails, return false.
-    // INSERT SOLUTION HERE
-
+    shm->data = mmap(0, sizeof(shared_data_t), PROT_READ | PROT_WRITE, MAP_SHARED, shm->fd, 0);
+    if (shm->data == MAP_FAILED) return false;
     // Modify the remaining stub only if necessary.
     return true;
 }
@@ -210,7 +220,25 @@ bool do_work( shared_memory_t* shm ) {
 
     // Update the value of local variable retVal and/or shm->data->result
     // as required.
-    // INSERT IMPLEMENTATION HERE
+
+    switch (shm->data->operation) {
+        case op_add:
+            shm->data->result = shm->data->lhs + shm->data->rhs;
+            break;
+        case op_sub:
+            shm->data->result = shm->data->lhs - shm->data->rhs;
+            break;
+        case op_mul:
+            shm->data->result = shm->data->lhs * shm->data->rhs;
+            break;
+        case op_div:
+            shm->data->result = shm->data->lhs / shm->data->rhs;
+            break;
+        case op_quit:
+        default:
+            retVal = false;
+            break;
+    }
 
     // Do not alter the following instruction which send the result back to the
     // controller.
@@ -219,7 +247,12 @@ bool do_work( shared_memory_t* shm ) {
     // If retval is false, the memory needs to be unmapped, but that must be
     // done _after_ posting the semaphore. Un-map the shared data, and assign
     // values to shm->data and shm-fd as noted above.
-    // INSERT IMPLEMENTATION HERE
+
+    if (!retVal) {
+        munmap(shm->data, sizeof(shared_data_t));
+        shm->fd = -1;
+        shm->data = NULL;
+    }
 
     // Keep this line to return the result.
     return retVal;
