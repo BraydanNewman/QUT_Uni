@@ -1,0 +1,71 @@
+<div class="m-4">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="{{ url_for('main.index') }}"
+        ><span
+                class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
+        ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="bi bi-soundwave"
+        >
+              <path
+                      fill-rule="evenodd"
+                      d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z"
+              ></path></svg></span
+        ><span>Music Hub</span></a
+        >
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="{{ url_for('main.index') }}" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
+                        <div class="dropdown-menu">
+                            <a href="{{ url_for('main.rock') }}" class="dropdown-item">Rock</a>
+                            <a href="{{ url_for('main.metal') }}" class="dropdown-item">Metal</a>
+                            <a href="{{ url_for('main.rap') }}" class="dropdown-item">Rap</a>
+                            <a href="{{ url_for('main.pop') }}" class="dropdown-item">Pop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ url_for('main.all') }}"class="dropdown-item">View all</a>
+                        </div>
+                    </li>					
+                </ul>
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item dropdown">                       
+					 {% if current_user.is_authenticated %}
+                     	<a href="{{ url_for('auth.login') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hi {{ current_user.username }}!</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+						    <a href="{{ url_for('event.create') }}" class="dropdown-item">Create an Event </a>
+                            <a href="{{ url_for('main.my') }}" class="dropdown-item">My Events</a>
+                            <a href="{{ url_for('history.myhistory') }}" class="dropdown-item">Booking History</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ url_for('auth.logout') }}" class="dropdown-item">Logout</a>
+                        </div>
+						{% else %}
+                        <li class="nav-item">
+                           <a href="{{ url_for('auth.login') }}" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="{{ url_for('auth.register') }}" class="nav-link">Register</a>
+                        </li>
+                        {% endif %}
+                        <li class="nav-item d-flex flex-nowrap">
+                            <form class="form-inline d-flex flex-nowrap align-items-center" action="{{url_for('main.search')}}" >
+                                <input type="text" name="search" class="form-control flex-grow-1 my-1" id="SearchForm">
+                                <button type="submit" class="flex-shrink-1 btn btn-primary my-1">Submit</button>
+                            </form>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

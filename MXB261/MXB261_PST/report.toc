@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Part 1 - A Biased Random Walk}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Single vs Random Starting Point}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Increasing the Particles Count}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Observations on the Distribution of Particles}{4}{}%
+\contentsline {section}{\numberline {2}Part 2 - Sampling from Experimental Data}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Similarities in the 2 Data Sets}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Kullback-Leibler Measurements on the Data Sets}{5}{}%
+\contentsline {subsection}{\numberline {2.3}The Effect of Changing the Number of Bins}{5}{}%

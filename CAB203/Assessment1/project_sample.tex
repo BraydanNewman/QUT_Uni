@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{hyperref}
+
+\newtheorem{definition}{Definition}
+
+\author{Matthew McKague}
+\title{CAB203 Graphs Project Sample Report}
+\date{}
+
+\begin{document}
+\maketitle
+
+This sample project report is based on the Transporter Transportation Problem from Lecture 9, written up as though it were a task in the project.  This write-up is on the longer side; not all the tasks will need a write-up this long.
+
+\section{Transporter Transportation Problem}
+
+The \emph{transporter transportation problem} (TTP) $(L, s, e)$ is defined by a set $L$ of \emph{links}, and starting point $s$ and an ending point $e$.  Each link is a pair of points $(a,b)$ representing a link between two cities $a$ and $b$.  Links are symmetric so that a link $(a,b)$ is taken to be the same as $(b, a)$, although only one of each is present in $L$.  The links are given in a CSV file with two columns, which we model as a set of pairs, where each pair corresponds to a single row.  In this way $L$ corresponds directly to the CSV file.
+
+The objective of a TTP is to find a sequence of intermediate cities $c_1, c_2, \ldots c_n$ so that there is a link between $s$ and $c_1$, between $c_n$ and $e$, and between each $c_j$ and $c_{j+1}$ so that teleporters can be used to transport goods from $s$ to $e$ through the sequence of intermediate cities via links.  The solution will be such a sequence of minimal length.
+
+The transporter transportation problem can be solved by finding a shortest path in a graph (see~\cite{voloshintextbook} for an introduction to graphs) where vertices are cities and edges are links.  More specifically, the graph is given by $G = (V, E)$ where $E$ is a  (see~\cite{cab203lecture6} for a definition) version of $L$:
+\begin{equation}\label{eq:E}
+    E = L \cup \{ (b, a) : (a,b) \in L \}
+\end{equation}
+and $V$ is the set of first items from each pair in $E$, which is all cities since $E$ is symmetric:
+\begin{equation}\label{eq:V}
+    V = \{ a : (a,b) \in E\}.
+\end{equation}
+
+In $G$ we find a shortest path from $s$ to $e$.  If no such path exists then there is no solution to the corresponding TTP.\@  Otherwise, suppose that we find a shortest path $s = v_1, v_2, \ldots , v_n= e$.  Then the solution to the TTP is given by $v_2, \ldots, v_{n-1}$.
+
+The Python implementation closely follows the description above, and so variables \verb+L+, \verb+E+ and \verb+V+ are sets.  We first use the \verb+csv+ module to read the CSV file into a set \verb+L+ of rows, where we convert each row from a list (as returned by the \verb+csv.reader+ object) to a tuple, which is hashable and can be stored in a set, unlike lists.  Sets \verb+E+ and \verb+V+ are computed using Python set comprehensions analogous to equations~\eqref{eq:E} and~\eqref{eq:V}.  The \verb+solveSPP+ function from the \verb+graphs+ module~\cite{cab203graphs.py} is used to find a shortest path and the intermediate vertices are finally returned using a slice.
+
+
+\begin{thebibliography}{9}
+    \bibitem{cab203lecture6}
+        Matthew McKague,
+        \emph{CAB203 Lecture 6}.
+        \url{https://canvas.qut.edu.au/courses/1979/files/1701727/download?download_frd=1}
+        QUT, 2023.
+    \bibitem{cab203graphs.py}
+        Matthew McKague,
+        \emph{graphs.py}.
+        \url{https://canvas.qut.edu.au/courses/1979/files/1755763/download?download_frd=1}
+        QUT, 2023.
+    \bibitem{voloshintextbook}
+        Vitaly Voloshin,
+        \emph{Introduction to graph theory}.
+        New York: Nova Science Publishers, 2009.
+\end{thebibliography}
+
+\end{document}

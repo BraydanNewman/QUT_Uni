@@ -1,0 +1,286 @@
+{% extends 'layout.html' %}
+{% block title %} Home Page {% endblock %}
+{% block main %}
+
+  <body style="background: #212529">
+    
+    <div
+      class="carousel slide"
+      data-bs-ride="carousel"
+      id="carousel-1"
+      style="height: 800px; color: #ffffff"
+    >
+      <div class="carousel-inner h-100">'
+        {% for event in events %}
+        {% if event.featured == '2' %}
+        <div class="carousel-item active h-100">
+          <img
+            class="w-100 d-block position-absolute h-100 fit-cover"
+            src="{{ event.image }}"
+            alt="Slide Image"
+            style="z-index: -1"
+          />
+          <div
+            class="container d-flex flex-column justify-content-center h-100"
+          >
+            <div class="row">
+              <div
+                class="col-md-6 col-xl-4 offset-md-2"
+                style="background: rgba(218, 218, 218, 0)"
+              >
+                <div style="max-width: 350px">
+                  <h1
+                    class="text-uppercase fw-bold"
+                    style="text-shadow: 0px 0px 10px rgb(0, 0, 0)"
+                  >
+                    {{ event.name }}
+                </br>
+                      on <i>{{ event.date }}</i>
+                  </h1>
+                  <p
+                    class="my-3"
+                    style="text-shadow: 0px 0px 10px rgb(0, 0, 0)"
+                  >
+                    {{ event.overview }}
+                  </p>
+                  <a
+                    class="btn btn-primary btn-lg me-2"
+                    role="button"
+                    href=""
+                    >Buy Tickets</a
+                  ><a
+                    class="btn btn-outline-primary btn-lg"
+                    role="button"
+                    href="{{url_for('event.show', id=event.id)}}"
+                    >Details</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      
+      <div>
+        <a
+          class="carousel-control-prev"
+          href="#carousel-1"
+          role="button"
+          data-bs-slide="prev"
+          ><span class="carousel-control-prev-icon"></span
+          ><span class="visually-hidden">Previous</span></a
+        ><a
+          class="carousel-control-next"
+          href="#carousel-1"
+          role="button"
+          data-bs-slide="next"
+          ><span class="carousel-control-next-icon"></span
+          ><span class="visually-hidden">Next</span></a
+        >
+      </div>
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#carousel-1"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+      </ol>
+    </div>
+    <div class="container text-white py-4 py-xl-5">
+      <div class="row mb-5" style="color: rgb(255, 255, 255)">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+          <h2>Upcoming Music Events</h2>
+          <p class="w-lg-50">Book Your Tickets NOW!</p>
+        </div>
+      </div>
+      <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+        
+        {% for event in events %}
+        {% if event.featured == '1' %}
+        <a href="{{url_for('event.show', id=event.id)}}" style="border-style: none">
+          <div class="media">
+            <img
+                class="rounded img-fluid d-block w-100 fit-cover"
+                style="height: 200px"
+                src={{event.image}}
+              />
+            <div class="py-4">
+              <h4>{{event.name}}</h4>
+              <p>{{event.description}}</p>
+            </div>
+          </div>
+        </a>
+        {% endif %}
+        {% endfor %} 
+        
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-1"
+              >Rock</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-2"
+              >Metal</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-3"
+              >Rap</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" role="tab" data-bs-toggle="tab" href="#tab-4"
+              >Pop</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content" style="color: #ffffff">
+          <div class="tab-pane" role="tabpanel" id="tab-1">
+            <div class="container py-4 py-xl-5">
+              
+              <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                  <h2>Rock</h2>
+                  <p class="w-lg-50">
+                    Rock music is a broad genre of popular music that originated as "rock and roll" 
+                    in the United States in the late 1940s and early 1950s, developing into a range of 
+                    different styles in the mid-1960s and later, particularly in the United States and United Kingdom.
+                  </p>
+                </div>
+              </div>
+              <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                {% for event in events %}
+                {% if event.genre == '1' %}
+                <a href="{{url_for('event.show', id=event.id)}}" style="border-style: none">
+                    <div class="media">
+                        <img
+                            class="rounded img-fluid d-block w-100 fit-cover"
+                            style="height: 200px"
+                            src={{event.image}}
+                            />
+                        <div class="py-4">
+                            <h4>{{event.name}}</h4>
+                            <p>{{event.description}}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}                         
+              </div>
+          </div>
+        </div>
+        <div class="tab-content" style="color: #ffffff">
+          <div class="tab-pane" role="tabpanel" id="tab-2">
+            <div class="container py-4 py-xl-5">
+              <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                  <h2>Metal</h2>
+                  <p class="w-lg-50">
+                    Heavy metal (or simply metal) is a genre of rock music that developed in the late 1960s and early 1970s, 
+                    largely in the United Kingdom and United States. With roots in blues rock, psychedelic rock and acid rock, 
+                    heavy metal bands developed a thick, monumental sound characterized by distorted guitars, extended guitar solos, emphatic beats and loudness. 
+                  </p>
+                </div>
+              </div>
+              <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                {% for event in events %}
+                {% if event.genre == '2' %}
+                <a href="{{url_for('event.show', id=event.id)}}" style="border-style: none">
+                    <div class="media">
+                        <img
+                            class="rounded img-fluid d-block w-100 fit-cover"
+                            style="height: 200px"
+                            src={{event.image}}
+                            />
+                        <div class="py-4">
+                            <h4>{{event.name}}</h4>
+                            <p>{{event.description}}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}                         
+              </div>
+          </div>
+        </div>
+        <div class="tab-content" style="color: #ffffff">
+          <div class="tab-pane" role="tabpanel" id="tab-3">
+            <div class="container py-4 py-xl-5">
+              <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                  <h2>Rap</h2>
+                  <p class="w-lg-50">
+                    Hip hop music or hip-hop music, also known as rap music, is a genre of popular music that originated in New York City in the 1970s. 
+                    It consists of stylized rhythmic music (usually built around drum beats) that commonly accompanies rapping, a rhythmic and rhyming speech.
+                  </p>
+                </div>
+              </div>
+              <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                {% for event in events %}
+                {% if event.genre == '3' %}
+                <a href="{{url_for('event.show', id=event.id)}}" style="border-style: none">
+                    <div class="media">
+                        <img
+                            class="rounded img-fluid d-block w-100 fit-cover"
+                            style="height: 200px"
+                            src={{event.image}}
+                            />
+                        <div class="py-4">
+                            <h4>{{event.name}}</h4>
+                            <p>{{event.description}}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}                         
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" style="color: #ffffff">
+          <div class="tab-pane active" role="tabpanel" id="tab-4">
+            <div class="container py-4 py-xl-5">
+              <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                  <h2 style="color:white;">Pop</h2>
+                  <p class="w-lg-50" style="color:white;">
+                    Pop music is a genre of popular music that originated in its modern form during the mid-1950s in the United States and the United Kingdom.
+                    The terms popular music and pop music are often used interchangeably, although the former describes all music that is popular and includes many disparate styles.
+                  </p>
+                </div>
+              </div>
+              <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                {% for event in events %}
+                {% if event.genre == '4' %}
+                <a href="{{url_for('event.show', id=event.id)}}" style="border-style: none">
+                    <div class="media">
+                        <img
+                            class="rounded img-fluid d-block w-100 fit-cover"
+                            style="height: 200px"
+                            src={{event.image}}
+                            />
+                        <div class="py-4">
+                            <h4>{{event.name}}</h4>
+                            <p>{{event.description}}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}                         
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock %}

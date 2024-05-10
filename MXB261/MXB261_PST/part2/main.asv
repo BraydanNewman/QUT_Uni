@@ -1,0 +1,65 @@
+%% Plot 1
+bins = 20;
+samples = 1000;
+[KLD1, KLD2, X, b, X1,b1] = sampling(bins, samples);
+
+KLD1
+KLD2
+
+subplot(1, 2, 1)
+bar(X, b)
+ylabel('Probability')
+xlabel('Bins')
+title('Given Data')
+
+subplot(1, 2, 2)
+bar(X1, b1)
+ylabel('Probability')
+xlabel('Bins')
+title('Sampled Data')
+
+sgtitle(["Sampling from Experimental Data", "Bins = 20, Samples = 1000"])
+
+%% PLot 2
+bins = 10;
+samples = 1000;
+[KLD1, KLD2, X, b, X1,b1] = sampling(bins, samples);
+
+KLD1
+KLD2
+
+subplot(1, 2, 1)
+bar(X, b)
+ylabel('Probability')
+xlabel('Bins')
+title('Given Data Probability Distribution')
+
+subplot(1, 2, 2)
+bar(X1, b1)
+ylabel('Probability')
+xlabel('Bins')
+title('Sampled Data Probability Distribution')
+
+sgtitle(["Sampling from Experimental Data", "Bins = 10, Samples = 1000"])
+
+%% Plot 3
+bins = 40;
+samples = 1000;
+[KLD1, KLD2, X, b, X1,b1] = sampling(bins, samples);
+
+KLD1
+KLD2
+
+subplot(1, 2, 1)
+bar(X, b)
+ylabel('Probability')
+xlabel('Bins')
+title('Given Data Probability Distribution')
+
+subplot(1, 2, 2)
+bar(X1, b1)
+ylabel('Probability')
+xlabel('Bins')
+title('Sampled Data')
+
+sgtitle(["Sampling from Experimental Data", "Bins = 20, Samples = 1000"])

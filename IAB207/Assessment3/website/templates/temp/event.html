@@ -1,0 +1,366 @@
+{% extends 'layout.html' %}
+{% block title %} Single Event {% endblock %}
+{#Event name goes up here#}
+{% block main %}
+
+  <body style="background: #212529">
+    <div class="eventdetails" style="margin-left:20px;">
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="color:white">
+    <li class="breadcrumb-item"><a href="#">Events</a></li>
+    <li class="breadcrumb-item"><a href="#">Category</a></li>
+	<li class="breadcrumb-item"><a href="#">Eventname</a></li>
+  </ol>
+    </nav>
+    <h2 class="eventname">Event name</h2>
+    <p><span>Created by: @......</span><br/>On Date.time</p>  {# If current user is owner of the event #}
+    </div>
+   <div class="container py-4 py-xl-5" style="color: #ffffff">
+	<div class="row row-cols-1 row-cols-md-2">
+        <div class="col">
+      <img
+        class="img-fluid"
+        src="/img/Daft-Punk-2013-portrait-billboard-1548-1614029258-compressed-3487468174.jpg" width="800"
+     height="300"  style="border-radius: 6px"
+      /></div>
+	          <div
+          class="col text-center d-flex flex-column justify-content-center p-4">
+          <div style="padding: 5px;
+              border-radius: 6px;
+              border-style: solid;
+              border-color: rgb(75, 72, 72);">
+
+              <div class="eventinformation">
+                  <h2 class="eventtitle">Name:</h2><h3 class="eventtitle">{ eventname }</h3><br>
+                  <h2 class="eventtitle">Date:</h2><h3 class="eventtitle">{ eventdate }</h3><br>
+                  <h2 class="eventtitle">Location:</h2><h3 class="eventtitle">{ eventlocation }</h3>
+              </div>
+
+              <button class="btn btn-primary btn-md "  type="button" style="">Buy tickets!</button>
+                  </div>
+          </div>
+          </div>
+        </div>
+		<div class="container py-4 py-xl-5" style="color: #ffffff">
+		<h2 style="text-align: left">About the event:</h2>
+          <p class="text-left" style="font-size: 22px">
+            { description }
+          </p>
+		</div>
+
+
+{#        <div class="col-md-6">#}
+{#          <iframe#}
+{#            allowfullscreen=""#}
+{#            frameborder="0"#}
+{#            loading="lazy"#}
+{#            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFXexOsv-IZdhsLSDu8j6p2LK8E3xwsc8&amp;q=2+George+St%2C+Brisbane+QLD+4000%2C+Australia&amp;zoom=11"#}
+{#            width="100%"#}
+{#            height="400"#}
+{#          ></iframe>#}
+{#        </div>#}
+
+    <div class="container" style="color: #ffffff; margin-top: 40px">
+      <div class="row">
+        <div class="col-md-6" style="text-align: center; height: auto">
+          <p style="font-size: 33px; text-align: center">Tickets on sale now</p>
+          <p style="font-size: 31px; text-align: center">{ price }</p>
+          <button
+            class="btn btn-primary btn-lg link-dark"
+            type="button"
+            style="width: 100%; height: 4em"
+          >
+            BUY TICKETS NOW - { available } LEFT
+          </button>
+          <p style="margin-top: 37px">
+            Meant balls it if up doubt small purse. Required his you put the
+            <br />outlived answered position. An pleasure exertion if believed
+            provided <br />to. All led out world these music while asked. Paid
+            mind even sons does <br />he door no. Attended overcame repeated it
+            is perceive marianne in. In am<br />
+            think on style child of. Servants moreover in sensible he it ye
+            <br />possible.&nbsp;
+          </p>
+        </div>
+        <div class="col">
+          <div
+            class="carousel slide"
+            data-bs-ride="carousel"
+            id="carousel-1"
+            style="border-radius: 0px"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="w-100 d-block"
+                  src="/img/daftpunk-3449475008.jpg"
+                  alt="Slide Image"
+                  style="border-radius: 6px"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="w-100 d-block"
+                  src="/img/980326-daft-punk-dubstep-electro-house-dance-disco-electronic-robot-cyborg-1165838139.jpg"
+                  alt="Slide Image"
+                  style="border-radius: 6px"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="w-100 d-block"
+                  src="/img/J22112000000000-00-2000x2000-772076444.jpg"
+                  alt="Slide Image"
+                  style="border-radius: 6px"
+                />
+              </div>
+            </div>
+            <div>
+              <a
+                class="carousel-control-prev"
+                href="#carousel-1"
+                role="button"
+                data-bs-slide="prev"
+                ><span class="carousel-control-prev-icon"></span
+                ><span class="visually-hidden">Previous</span></a
+              ><a
+                class="carousel-control-next"
+                href="#carousel-1"
+                role="button"
+                data-bs-slide="next"
+                ><span class="carousel-control-next-icon"></span
+                ><span class="visually-hidden">Next</span></a
+              >
+            </div>
+            <ol class="carousel-indicators">
+              <li
+                data-bs-target="#carousel-1"
+                data-bs-slide-to="0"
+                class="active"
+              ></li>
+              <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="color: #ffffff; margin-top: 58px">
+      <h1 style="text-align: center">Comments</h1>
+      <div
+        class="row"
+        style="margin-top: 50px; border-bottom-style: solid; text-align: right"
+      >
+        <div class="col" style="text-align: center">
+          <div
+            style="
+              display: inline-block;
+              width: 100%;
+              height: 100px;
+              margin-top: 15px;
+              margin-bottom: 15px;
+              text-align: right;
+            "
+          >
+            <input
+              class="form-control-lg"
+              type="text"
+              style="
+                width: 100%;
+                text-align: center;
+                margin: 0px;
+                margin-top: 17px;
+                height: 40px;
+              "
+              placeholder="Title"
+            /><input
+              class="form-control-lg"
+              type="text"
+              style="
+                width: 100%;
+                text-align: center;
+                margin: 0px;
+                margin-top: 17px;
+                height: 40px;
+              "
+              placeholder="Comment"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            type="button"
+            style="
+              display: inline-block;
+              height: 100px;
+              width: 80%;
+              margin: 15px;
+              margin-top: 24px;
+              color: #212529;
+              font-size: 25px;
+              font-weight: bold;
+            "
+          >
+            POST
+          </button>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px; border-bottom-style: solid">
+        <div class="col">
+          <img
+            src="/img/th-2739153216.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              padding: 0px;
+              margin: 10px;
+              text-align: left;
+            "
+          />
+          <div style="display: inline-block">
+            <h1 style="display: block; font-size: 24px">
+              Best Dinner I've Ever Had
+            </h1>
+            <p>
+              Extended kindness trifling remember he confined outlived if.
+              Assistance sentiments yet unpleasing say. Open they an busy they
+              my such high.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px; border-bottom-style: solid">
+        <div class="col" style="text-align: right">
+          <div style="display: inline-block">
+            <h1 style="display: block; font-size: 24px">
+              Is at purse tried jokes china ready decay an
+            </h1>
+            <p>
+              Small its shy way had woody downs power. To denoting admitted
+              speaking learning my exercise so in. Procured shutters mr it
+              feelings.
+            </p>
+          </div>
+          <img
+            src="/img/th-3099738986.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              padding: 0px;
+              margin: 10px;
+              text-align: left;
+            "
+          />
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px; border-bottom-style: solid">
+        <div class="col">
+          <img
+            src="/img/th-289512610.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              padding: 0px;
+              margin: 10px;
+              text-align: left;
+            "
+          />
+          <div style="display: inline-block">
+            <h1 style="display: block; font-size: 24px">
+              Started several mistake joy say painful removed reached end
+            </h1>
+            <p>
+              State burst think end are its. Arrived off she elderly beloved him
+              affixed noisier yet. An course regard to up he hardly.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px; border-bottom-style: solid">
+        <div class="col" style="text-align: right">
+          <div style="display: inline-block">
+            <h1 style="display: block; font-size: 24px">
+              Residence certainly elsewhere something she preferred cordially
+              law
+            </h1>
+            <p>
+              Too cultivated use solicitude frequently. Dashwood likewise up
+              consider continue entrance ladyship oh. Wrong guest given purse
+              power is no.
+            </p>
+          </div>
+          <img
+            src="/img/th-4200043492.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              padding: 0px;
+              margin: 10px;
+              text-align: left;
+            "
+          />
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px; border-bottom-style: solid">
+        <div class="col">
+          <img
+            src="/img/th-2644135582.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              padding: 0px;
+              margin: 10px;
+              text-align: left;
+            "
+          />
+          <div style="display: inline-block">
+            <h1 style="display: block; font-size: 24px">
+              Fat son how smiling mrs natural expense anxious friends
+            </h1>
+            <p>
+              As material in learning subjects so improved feelings. Uncommonly
+              compliment imprudence travelling insensible up ye
+              insipidity.&nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px; border-bottom-style: solid">
+        <div class="col" style="text-align: right">
+          <div style="display: inline-block">
+            <h1 style="display: block; font-size: 24px">
+              He unaffected sympathize discovered at no am conviction
+              principles.
+            </h1>
+            <p>
+              Death weeks early had their and folly timed put. Hearted forbade
+              on an village ye in fifteen. Age attended betrayed her man
+              raptures laughter.
+            </p>
+          </div>
+          <img
+            src="/img/photo.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              padding: 0px;
+              margin: 10px;
+              text-align: left;
+            "
+          />
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}

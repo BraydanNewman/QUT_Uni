@@ -1,0 +1,33 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% extends 'layout.html' %}
+{% block title %} Show all {% endblock %}
+{% block main %}
+
+<body style="background: #212529;color: #ffffff;">
+    <div class="container text-white py-4 py-xl-5">
+        <div class="row mb-5" style="color: rgb(255, 255, 255)">
+          <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2>All Music Events</h2>
+          </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            {% for event in events %}
+            <a href="{{url_for('event.show', id=event.id)}}" style="border-style: none">
+                <div class="media">
+                    <img
+                        class="rounded img-fluid d-block w-100 fit-cover"
+                        style="height: 200px"
+                        src={{event.image}}
+                        />
+                    <div class="py-4">
+                        <h4>{{event.name}}</h4>
+                        <p>{{event.description}}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %} 
+        </div>
+    </div>
+</body>
+
+{% endblock %}

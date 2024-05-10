@@ -1,0 +1,2 @@
+web: gunicorn -w 2 'main:app'
+

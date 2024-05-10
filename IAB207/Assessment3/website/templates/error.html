@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block title %} {{ error_number }} {% endblock %}
+{% block main %}
+      <body style="background: #212529">
+    <div>
+            <section class="position-relative py-4 py-xl-5">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-md-8 col-xl-6 text-center mx-auto offset-md-2" style="color:white">
+                                   <h1>Oops... {{ error_number }}</h1>
+                            <h2>{{ error_message }}</h2>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-md-8 col-xl-6 text-center mx-auto offset-md-2">
+                            {% if error_number == "401" %}
+                            <a
+                                class="btn btn-primary btn-lg me-2"
+                                role="button"
+                                href="{{ url_for('auth.login')}}"
+                                >Login</a>
+                            {% endif %}
+                            <a
+                                class="btn btn-primary btn-lg me-2"
+                                role="button"
+                                href="{{ url_for('main.index')}}"
+                                >Back to home</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+{% endblock %}

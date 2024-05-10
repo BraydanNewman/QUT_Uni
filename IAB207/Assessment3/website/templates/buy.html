@@ -1,0 +1,81 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% extends 'layout.html' %}
+{% block title %} Purchase a Ticket {% endblock %}
+{% block main %}
+    <body style="background: #212529">
+    <div class="container" style="color: #ffffff">
+{#        <h1>Tickets for {{event.name}}</h1>#}
+{#        <div class="eventinformation">#}
+{#                <h2 class="eventdate"></h2><h3 class="eventtitle">At {{event.location}} on {{event.date}}</h3><br>#}
+{#                <h2 class="eventtime"></h2><h3 class="eventtitle">Gates Open: {{event.time}}</h3><br>#}
+{#                <h2 class="eventtime"></h2><h3 class="eventtitle">Category: {{event.genre}}</h3><br>#}
+{#              </div>#}
+{#    </div>#}
+{#    <div class="container" style="color: white">#}
+{#        <form action="{{ url_for('event.create') }}" method="post" enctype="multipart/form-data">#}
+{#            {{ render_form(form, form_type='basic') }}#}
+
+
+{#            # Rendering Option 2#}
+{#          <div class="form-group">#}
+{#            {{ form.name.label() }}#}
+{#            {{ form.name() }}#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            {{ form.price.label() }}#}
+{#            {{ form.price() }}#}
+{#          </div>#}
+{#		  		  		  		 <div class="form-group">#}
+{#            {{ form.available.label()}}#}
+{#            {{ form.available()}}#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            {{ form.date.label() }}#}
+{#            {{ form.date() }}#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            {{ form.time.label()}}#}
+{#            {{ form.time()}}#}
+{#          </div>#}
+{#		 <div class="form-group">#}
+{#            {{ form.overview.label()}}#}
+{#            {{ form.overview()}}#}
+{#          </div>#}
+{#		  		 <div class="form-group">#}
+{#            {{ form.description.label()}}#}
+{#            {{ form.description()}}#}
+{#          </div>#}
+{#		  		 <div class="form-group">#}
+{#            {{ form.purchaseinfo.label()}}#}
+{#            {{ form.purchaseinfo()}}#}
+{#          </div>#}
+{#		  		 <div class="form-group">#}
+{#            {{ form.location.label()}}#}
+{#            {{ form.location()}}#}
+{#          </div>#}
+{#		  		  		 <div class="form-group">#}
+{#            {{ form.genre.label()}}#}
+{#            {{ form.genre()}}#}
+{#          </div>#}
+{#		  		  		 <div class="form-group">#}
+{#            {{ form.image.label()}}#}
+{#            {{ form.image()}}#}
+{#          </div>#}
+{#		   <div class="form-group">#}
+{#            {{ form.featured.label()}}#}
+{#            {{ form.featured()}}#}
+{#          </div>#}
+{#          <br>#}
+{#          <div id="success"></div>#}
+{#          <div class="form-group">#}
+{#            {{form.create()}}#}
+{#          </div>#}
+{#      </form>#}
+
+{#          <div class="errors">#}
+{#                    {% for field, ers in error %}#}
+{#    {{ ', '.join(ers) }}#}
+{#    {% endfor %}#}
+{#            </div>#}
+    </div>
+   {% endblock %}

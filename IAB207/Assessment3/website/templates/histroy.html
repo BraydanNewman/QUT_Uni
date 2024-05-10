@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %} {{ current_user.username }} History {% endblock %}
+{% block main %}
+
+<body style="background: #212529;color: #ffffff;">
+    <div class="container text-white py-4 py-xl-5">
+        <div class="row mb-5" style="color: rgb(255, 255, 255)">
+          <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2>Your history</h2>
+          </div>
+        </div>
+   {#Purchase history comes here#}     <ul class="list-group list-group-flush">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+
+
+            </div>
+</body>
+
+{% endblock %}
