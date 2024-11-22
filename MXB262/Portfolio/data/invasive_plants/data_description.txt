@@ -1,0 +1,69 @@
+﻿Raster (.tif) of the potential distributions of 13 invasive plants in Minnesota
+
+FILES: This folder contains raster files for each of the 13 species included in this component of the Tactical Plan Project. 
+
+DATA DESCRIPTION: The rasters depict the mean cross-model and cross-assumption distribution estimates for each species, on a scale of 0 to 1. Values near 0 indicate low likelihood of finding the species there, or low habitat suitability, and values near 1 represent a high likelihood of finding the species.
+
+Species included:
+Canada thistle (Cirsium arvense)
+Common buckthorn (Rhamnus cathartica)
+Common tansy (Tanacetum vulgare)
+Garlic mustard (Alliaria petiolata)
+Glossy buckthorn (Frangula alnus)
+Japanese knotweed (Polygonum spp.)*
+Leafy spurge (Euphorbia esula)
+Multiflora rose (Rosa multiflora)
+Narrowleaf bittercress (Cardamine impatiens)
+Plumeless thistle (Carduus spp.)**
+Purple loosestrife (Lythrum salicaria)
+Spotted knapweed (Centaurea stoebe)
+Wild parsnip (Pastinaca sativa)
+
+* Mapped and modeled data include hybrid knotweed species as well
+** Mapped and modeled data include all Carduus spp.
+
+DATA COMPOSITION: The models included in these summary rasters include random forests (Breiman 2001), boosted regression trees (Elith et al. 2008), and maximum entropy (Phillips and Dudík 2008). These models were run with and without land cover (NLCD) as a predictor variable. True absences were available as a result of an extensive MN Department of Agriculture survey effort for a 5 species: Canada thistle, common tansy, leafy spurge, spotted knapweed, and wild parsnip, while pseudo-absences were generated for the 8 remaining species. Pseudo-absences were generated according to the guidelines for each modeling approach described in Barbet-Massin et al. (2012). Cross-model, cross-assumption estimates were produced as a weighted average of each model output, as computed by the consensus mapping tools (ensemble.raster()) in the BiodiversityR R package (Kindt 2019). All models were computed in R (R Core Team 2019) at a spatial resolution of 900 meters with coordinate system  EPSG:5070 (NAD83 / Conus Albers - Projected).
+
+Variables included as predictors include:
+
+NLCD Land cover (2016); U.S. Geological Survey (2016) NLCD 2016 Land Cover Conterminous United States. Multi-Resolution Land Characteristics Consortium. https://www.mrlc.gov/data/nlcd-2016-land-cover-conus
+
+NLCD Tree canopy cover (2016); U.S. Geological Survey (2016) NLCD 2016 Tree Caonpy Cover Conterminous United States. Multi-Resolution Land Characteristics Consortium. https://www.mrlc.gov/data/type/tree-canopy
+
+Elevation; U.S. Geological Survey (2019). National Elevation Dataset (NED). The National Map. https://catalog.data.gov/dataset/usgs-national-elevation-dataset-ned
+
+Soil texture, drainage class, and taxonomic order; U.S. Department of Agriculture Natural Resources Conservation Service (2019). Web Soil Survey. National Cooperative Soil Survey. https://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm
+
+Current climate and bioclimatic variables: annual mean temperature, mean temperature of warmest quarter, mean temperature of coldest quarter, annual precipitation, precipitation of wettest quarter, and precipitation of driest quarter; Worldclim (2019). Global Climate Data 1.4. https://www.worldclim.org/version1
+
+
+Species occurence data were obtained from: canada thistle, common tansy, leafy spurge, spotted knapweed, and wild parsnip
+
+Early Detection & Distribution Mapping System (EDDMapS) (2019). Point Distributions. University of Georgia Center for Invasive Species and Ecosystem Health. https://www.eddmaps.org/distribution/
+
+U.S. Forest Service Forest Inventory and Analysis (FIA) (2019). Plot-level data. U.S. Forest Service FIA National Program. https://www.fia.fs.fed.us/tools-data/
+
+True absences for canada thistle, common tansy, leafy spurge, spotted knapweed, and wild parsnip were obtained by the Minnesota Department of Agriculture (MDA) as part of an extensive survey effort for these five species. Data are not publicly available, but more information can be obtained by contacting the MDA Plant Protection division.
+
+
+REFERENCES:
+Barbet-Massin, M., Jiguet, F., Albert, C.H. and W. Thuiller. (2012). Selecting pseudo‐absences for species distribution models: how, where and how many? Methods in Ecology and Evolution 3:2 327-338.
+
+Breiman, L. (2001). Random forests. Machine learning, 45(1), 5-32.
+
+Elith, J., Leathwick, J. R., & Hastie, T. (2008). A working guide to boosted regression trees. Journal of Animal Ecology, 77(4), 802-813.
+
+Kindt, R. (2019). BiodiversityR: Package for Community Ecology and Suitability Analysis. URL https://cran.r-project.org/web/packages/BiodiversityR/index.html
+
+Phillips, S. J., & Dudík, M. (2008). Modeling of species distributions with Maxent: new extensions and a comprehensive evaluation. Ecography, 31(2), 161-175.
+
+R Core Team. (2019). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+
+
+LAST UPDATED: 10/28/2019
+
+CONTACT:
+Jason R. Reinhardt
+reinh215@umn.edu
+Dept. of Forest Resources
+University of Minnesota

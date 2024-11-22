@@ -1,0 +1,115 @@
+product,producer,consumer,date
+Hops,Launceston,Burnie,1585-01-03
+Hops,Launceston,Devonport,1585-01-09
+Hops,Launceston,Devonport,1585-01-11
+Hops,Launceston,Burnie,1585-01-12
+Hops,Launceston,Devonport,1585-01-12
+Hops,Launceston,Burnie,1585-01-17
+Hops,Launceston,Burnie,1585-01-22
+Hops,Launceston,Burnie,1585-01-23
+Whiskey,Launceston,Devonport,1585-01-24
+Hops,Launceston,Burnie,1585-01-28
+Hops,Launceston,Burnie,1585-01-30
+Hops,Launceston,Burnie,1585-02-05
+Hops,Launceston,Burnie,1585-02-07
+Whiskey ,Launceston,Burnie,1585-02-10
+Hops,Launceston,Burnie,1585-02-11
+Hops,Launceston,Burnie,1585-02-16
+Whiskey,Devonport,Ulverstone,1585-02-20
+Hops,Launceston,Hobart,1585-02-20
+Whiskey,Devonport,Hobart,1585-02-21
+Hops,Launceston,Hobart,1585-02-22
+Whiskey,Launceston,Hobart,1585-02-25
+Wine,Launceston,Hobart,1585-02-25
+Hops,Launceston,Hobart,1585-02-26
+Whiskey,Launceston,Hobart,1585-02-26
+Whiskey,Launceston,Hobart,1585-02-27
+Whiskey,Launceston,Hobart,1585-03-02
+Whiskey,Launceston,Hobart,1585-03-05
+Whiskey,Launceston,Hobart,1585-03-09
+Hops ,Launceston,Hobart,1585-03-11
+Hops ,Devonport,Hobart,1585-03-12
+Hops ,Launceston,Hobart,1585-03-13
+Whiskey,Devonport,Hobart,1585-03-14
+Hops ,Launceston,Hobart,1585-03-14
+Whiskey,Launceston,Hobart,1585-03-14
+Hops ,Launceston,Hobart,1585-03-15
+Hops ,Launceston,Hobart,1585-03-19
+Wine,Devonport,Hobart,1585-03-25
+Wine,Kingston,Devonport,1585-03-25
+Hops ,Launceston,Hobart,1585-03-25
+Whiskey ,Launceston,Devonport,1585-03-28
+Hops ,Launceston,Hobart,1585-03-28
+Hops ,Launceston,Hobart,1585-03-30
+Hops ,Launceston,Hobart,1585-03-31
+Hops ,Launceston,Hobart,1585-04-06
+Hops ,Launceston,Hobart,1585-04-10
+Gin,Devonport,Hobart,1585-04-11
+Hops ,Launceston,Hobart,1585-04-11
+Hops ,Launceston,Hobart,1585-04-19
+Hops ,Launceston,Hobart,1585-04-24
+Gin,Launceston,Hobart,1585-04-27
+Hops ,Launceston,Hobart,1585-04-28
+Hops ,Launceston,Hobart,1585-04-30
+Hops ,Devonport,Hobart,1585-05-01
+Hops ,Launceston,Gagebrook,1585-05-04
+Wine,Devonport,Hobart,1585-05-08
+Whiskey,Launceston,Hobart,1585-05-09
+Hops ,Launceston,Hobart,1585-05-09
+Hops ,Launceston,Hobart,1585-05-11
+Gin,Devonport,Hobart,1585-05-12
+Hops ,Launceston,Hobart,1585-05-17
+Whisky,Devonport,Hobart,1585-05-20
+Whisky,Launceston,Hobart,1585-05-28
+Whisky,Devonport,Hobart,1585-05-28
+Hops ,Launceston,Hobart,1585-05-28
+Hops ,Launceston,Hobart,1585-05-28
+Hops ,Launceston,Hobart,1585-05-30
+Hops ,Launceston,Hobart,1585-06-01
+Hops ,Launceston,Hobart,1585-06-04
+Gin,Devonport,Gagebrook,1585-06-11
+Gin,Launceston,Bridgewater,1585-06-13
+Gin,Launceston,Hobart,1585-06-14
+Gin,Launceston,Bridgewater,1585-06-19
+Wine,Launceston,Hobart,1585-06-20
+Gin,Kingston,Devonport,1585-06-23
+Bops,Launceston,Hobart,1585-06-29
+Gin ,Launceston,Hobart,1585-07-05
+Gin ,Launceston,Hobart,1585-07-09
+Gin ,Launceston,Hobart,1585-07-12
+Whiskey,Launceston,Hobart,1585-07-13
+Whiskey,Launceston,Hobart,1585-07-19
+Whiskey,Launceston,Hobart,1585-07-25
+Whiskey,Launceston,Hobart,1585-07-27
+Gin ,Wynyard,Hobart,1585-07-29
+Hops ,Launceston,Hobart,1585-07-31
+Gin ,Launceston,Hobart,1585-08-01
+Gin ,Devonport,Hobart,1585-08-02
+Gin ,Devonport,Hobart,1585-08-06
+whiskey,Devonport,Hobart,1585-08-06
+Gin ,Devonport,Hobart,1585-08-07
+Hops ,Launceston,Hobart,1585-08-08
+Gin ,Devonport,Hobart,1585-08-09
+Whiskey,Devonport,Hobart,1585-08-12
+Wine,Launceston,Hobart,1585-08-12
+Wine,Launceston,Hobart,1585-08-16
+Gin ,Devonport,Hobart,1585-08-18
+Gin ,Devonport,Hobart,1585-08-22
+Whiskey,Launceston,Hobart,1585-08-22
+Hops ,Kingston,Devonport,1585-08-30
+Gin ,Devonport,Hobart,1585-09-02
+Gin ,Devonport,Hobart,1585-09-03
+Whiskey,Launceston,Hobart,1585-09-04
+Gin ,Devonport,Hobart,1585-09-06
+Gin ,Devonport,Hobart,1585-09-07
+Gin ,Devonport,Hobart,1585-09-08
+Gin ,Devonport,Hobart,1585-09-10
+Gin ,Devonport,Hobart,1585-09-14
+Gin ,Launceston,Hobart,1585-09-16
+Gin ,Launceston,Hobart,1585-09-17
+Gin ,Smithton,Somerset,1585-10-21
+Gin ,Penguin,Somerset,1585-10-30
+Gin ,Longford,Somerset,1585-11-30
+Whiskey ,Devonport,Somerset,1585-12-16
+Hops,Latrobe,Somerset,1585-12-20
+Gin ,Devonport,Somerset,1585-12-27

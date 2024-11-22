@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandelbrot and Julia Sets</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+    #container {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; font-size: xx-large;">
+    <div style="padding: 10px; width: 50%;">
+      <h2 id="xyValue"></h2>
+      <h2 id="cValue"></h2>
+      <button id="resetZoomButton"><h1>Reset</h1></button>
+
+      <label for="juliaPower">Julia Set Power</label>
+      <input type="range" id="juliaPower" min="2" max="10" step="1" value="2">
+      <label id="juliaPowerNumber">2</label>
+
+      <button id="mandelbrotImage"><h1>Get Mandelbrot Image</h1></button>
+
+      <button id="juliaImage"><h1>Julia Image</h1></button>
+    </div>
+    <div style="width: 50%;">
+      <h2>Controls:</h2>
+      <p>
+        <b>Change scale of browser to fit canvases</b>
+        <br>
+        Mandelbrot Set left, Julia Set Right
+        <br>
+        Zoom: Mouse wheel (Both Fractals)
+        <br>
+        Selecting C value in Mandelbrot Set: Left Click and drag (Can hold left click and drag around for real time changes)
+      </p>
+    </div>
+
+  </div>
+
+  <div id="container">
+    <canvas id="mandelbrot" width="2000" height="2000"></canvas>
+    <canvas id="julia" width="2000" height="2000"></canvas>
+  </div>
+  <script type="module">
+    const mandelbrotCanvas = document.getElementById('mandelbrot');
+    const juliaCanvas = document.getElementById('julia');
+
+    const glMandelbrot = mandelbrotCanvas.getContext('webgl', { preserveDrawingBuffer: true });
+    const ctxMandelbrot = mandelbrotCanvas.getContext('2d');
+
+    const glJulia = juliaCanvas.getContext('webgl', { preserveDrawingBuffer: true });
+    const ctxJulia = juliaCanvas.getContext('2d');
+
+
+    const cValue = document.getElementById("cValue")
+    const xyValue = document.getElementById("xyValue")
+    const juliaPowerSlider = document.getElementById('juliaPower');
+    const juliaPowerNumber = document.getElementById("juliaPowerNumber")
+
+    const mandelbrotImage = document.getElementById("mandelbrotImage");
+    const juliaImage = document.getElementById("juliaImage");
+
+    let cr = 0;
+    let ci = 0;
+    let juliaPower = 2;
+
+    const maxIterations = 100;
+    let mandelbrotZoom = { xMin: -2, xMax: 2, yMin: -2, yMax: 2 };
+    let juliaZoom = { xMin: -2, xMax: 2, yMin: -2, yMax: 2 };
+
+    function createShader(gl, type, source) {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        console.error('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+        gl.deleteShader(shader);
+        return null;
+      }
+      return shader;
+    }
+
+    function createProgram(gl, vertexShader, fragmentShader) {
+      const program = gl.createProgram();
+      gl.attachShader(program, vertexShader);
+      gl.attachShader(program, fragmentShader);
+      gl.linkProgram(program);
+      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        console.error('Unable to initialize the shader program: ' + gl.getProgramInfoLog(program));
+        return null;
+      }
+      return program;
+    }
+
+    function drawMandelbrot() {
+      const width = mandelbrotCanvas.width;
+      const height = mandelbrotCanvas.height;
+
+      const vertexShaderSource = `
+        attribute vec4 position;
+        void main() {
+          gl_Position = position;
+        }
+      `;
+
+      const fragmentShaderSource = `
+        precision highp float;
+        uniform float xMin;
+        uniform float xMax;
+        uniform float yMin;
+        uniform float yMax;
+        uniform float maxIterations;
+        void main() {
+          float cr = xMin + (gl_FragCoord.x / ${width}.0) * (xMax - xMin);
+          float ci = yMin + (gl_FragCoord.y / ${height}.0) * (yMax - yMin);
+          float zr = 0.0;
+          float zi = 0.0;
+          float iteration = 0.0;
+
+          for (int i = 0; i < 1000; i++) {
+            if (zr * zr + zi * zi >= 4.0 || iteration >= maxIterations) {
+              break;
+            }
+            float tmp = zr * zr - zi * zi + cr;
+            zi = 2.0 * zr * zi + ci;
+            zr = tmp;
+            iteration++;
+          }
+
+          if (iteration == maxIterations) {
+            gl_FragColor = vec4(0, 0, 0, 0);
+          } else {
+            float hue = iteration * 10.0;
+            float saturation = 1.0;
+            float lightness = 0.5;
+            float c = (1.0 - abs(2.0 * lightness - 1.0)) * saturation;
+            float x = c * (1.0 - abs(mod(hue / 60.0, 2.0) - 1.0));
+            float m = lightness - c / 2.0;
+            vec3 rgb;
+
+            if (hue < 60.0) {
+              rgb = vec3(c, x, 0.0);
+            } else if (hue < 120.0) {
+              rgb = vec3(x, c, 0.0);
+            } else if (hue < 180.0) {
+              rgb = vec3(0.0, c, x);
+            } else if (hue < 240.0) {
+              rgb = vec3(0.0, x, c);
+            } else if (hue < 300.0) {
+              rgb = vec3(x, 0.0, c);
+            } else {
+              rgb = vec3(c, 0.0, x);
+            }
+
+            gl_FragColor = vec4(rgb + vec3(m), 1.0);
+          }
+        }
+      `;
+
+      const vertexShader = createShader(glMandelbrot, glMandelbrot.VERTEX_SHADER, vertexShaderSource);
+      const fragmentShader = createShader(glMandelbrot, glMandelbrot.FRAGMENT_SHADER, fragmentShaderSource);
+      const program = createProgram(glMandelbrot, vertexShader, fragmentShader);
+
+      const positionAttributeLocation = glMandelbrot.getAttribLocation(program, 'position');
+      const positionBuffer = glMandelbrot.createBuffer();
+      glMandelbrot.bindBuffer(glMandelbrot.ARRAY_BUFFER, positionBuffer);
+      glMandelbrot.bufferData(glMandelbrot.ARRAY_BUFFER, new Float32Array([
+        -1, -1,
+         1, -1,
+        -1,  1,
+        -1,  1,
+         1, -1,
+         1,  1,
+      ]), glMandelbrot.STATIC_DRAW);
+
+      glMandelbrot.viewport(0, 0, width, height);
+      glMandelbrot.clearColor(0, 0, 0, 0);
+      glMandelbrot.clear(glMandelbrot.COLOR_BUFFER_BIT);
+
+      glMandelbrot.useProgram(program);
+
+      glMandelbrot.enableVertexAttribArray(positionAttributeLocation);
+      glMandelbrot.bindBuffer(glMandelbrot.ARRAY_BUFFER, positionBuffer);
+      glMandelbrot.vertexAttribPointer(positionAttributeLocation, 2, glMandelbrot.FLOAT, false, 0, 0);
+
+      glMandelbrot.uniform1f(glMandelbrot.getUniformLocation(program, 'xMin'), mandelbrotZoom.xMin);
+      glMandelbrot.uniform1f(glMandelbrot.getUniformLocation(program, 'xMax'), mandelbrotZoom.xMax);
+      glMandelbrot.uniform1f(glMandelbrot.getUniformLocation(program, 'yMin'), mandelbrotZoom.yMax);
+      glMandelbrot.uniform1f(glMandelbrot.getUniformLocation(program, 'yMax'), mandelbrotZoom.yMin);
+
+      glMandelbrot.uniform1f(glMandelbrot.getUniformLocation(program, 'maxIterations'), maxIterations);
+
+      glMandelbrot.drawArrays(glMandelbrot.TRIANGLES, 0, 6);
+
+      // Draw dot where cr, ci are located using WebGL
+      const dotVertexShaderSource = `
+        attribute vec4 position;
+        void main() {
+          gl_PointSize = 10.0;
+          gl_Position = position;
+        }
+      `;
+
+      const dotFragmentShaderSource = `
+        precision highp float;
+        void main() {
+          gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); // Red color
+        }
+      `;
+
+      const dotVertexShader = createShader(glMandelbrot, glMandelbrot.VERTEX_SHADER, dotVertexShaderSource);
+      const dotFragmentShader = createShader(glMandelbrot, glMandelbrot.FRAGMENT_SHADER, dotFragmentShaderSource);
+      const dotProgram = createProgram(glMandelbrot, dotVertexShader, dotFragmentShader);
+
+      const dotPositionAttributeLocation = glMandelbrot.getAttribLocation(dotProgram, 'position');
+      const dotPositionBuffer = glMandelbrot.createBuffer();
+      glMandelbrot.bindBuffer(glMandelbrot.ARRAY_BUFFER, dotPositionBuffer);
+
+      // const cr = (mandelbrotZoom.xMin + mandelbrotZoom.xMax) / 2.0;
+      // const ci = (mandelbrotZoom.yMin + mandelbrotZoom.yMax) / 2.0;
+      const dotX = (cr - mandelbrotZoom.xMin) / (mandelbrotZoom.xMax - mandelbrotZoom.xMin) * 2.0 - 1.0;
+      const dotY = (ci - mandelbrotZoom.yMin) / (mandelbrotZoom.yMax - mandelbrotZoom.yMin) * 2.0 - 1.0;
+
+      glMandelbrot.bufferData(glMandelbrot.ARRAY_BUFFER, new Float32Array([dotX, dotY * -1]), glMandelbrot.STATIC_DRAW);
+
+      glMandelbrot.useProgram(dotProgram);
+      glMandelbrot.enableVertexAttribArray(dotPositionAttributeLocation);
+      glMandelbrot.vertexAttribPointer(dotPositionAttributeLocation, 2, glMandelbrot.FLOAT, false, 0, 0);
+      glMandelbrot.drawArrays(glMandelbrot.POINTS, 0, 1);
+    }
+
+    function drawJulia(cr, ci) {
+      cValue.innerText = `Julia Set: c = ${cr} + ${ci}i`
+      xyValue.innerText = `Mandelbrot Set location: x = ${cr}, y = ${ci}`
+      const width = juliaCanvas.width;
+      const height = juliaCanvas.height;
+
+      const vertexShaderSource = `
+        attribute vec4 position;
+        void main() {
+          gl_Position = position;
+        }
+      `;
+
+      const fragmentShaderSource = `
+        precision highp float;
+        uniform float cr;
+        uniform float ci;
+        uniform float xMin;
+        uniform float xMax;
+        uniform float yMin;
+        uniform float yMax;
+        uniform float maxIterations;
+        uniform float power;
+        void main() {
+          float zr = xMin + (gl_FragCoord.x / ${width}.0) * (xMax - xMin);
+          float zi = yMin + (gl_FragCoord.y / ${height}.0) * (yMax - yMin);
+          float iteration = 0.0;
+
+          for (int i = 0; i < 1000; i++) {
+            if (zr * zr + zi * zi >= 4.0 || iteration >= maxIterations) {
+              break;
+            }
+
+            float r = pow(zr * zr + zi * zi, power / 2.0);
+            float theta = atan(zi, zr) * power;
+            zr = r * cos(theta) + cr;
+            zi = r * sin(theta) + ci;
+            iteration++;
+          }
+
+          if (iteration == maxIterations) {
+            gl_FragColor = vec4(0, 0, 0, 0);
+          } else {
+            float hue = iteration * 10.0;
+            float saturation = 1.0;
+            float lightness = 0.5;
+            float c = (1.0 - abs(2.0 * lightness - 1.0)) * saturation;
+            float x = c * (1.0 - abs(mod(hue / 60.0, 2.0) - 1.0));
+            float m = lightness - c / 2.0;
+            vec3 rgb;
+
+            if (hue < 60.0) {
+              rgb = vec3(c, x, 0.0);
+            } else if (hue < 120.0) {
+              rgb = vec3(x, c, 0.0);
+            } else if (hue < 180.0) {
+              rgb = vec3(0.0, c, x);
+            } else if (hue < 240.0) {
+              rgb = vec3(0.0, x, c);
+            } else if (hue < 300.0) {
+              rgb = vec3(x, 0.0, c);
+            } else {
+              rgb = vec3(c, 0.0, x);
+            }
+
+            gl_FragColor = vec4(rgb + vec3(m), 1.0);
+          }
+        }
+      `;
+
+      const vertexShader = createShader(glJulia, glJulia.VERTEX_SHADER, vertexShaderSource);
+      const fragmentShader = createShader(glJulia, glJulia.FRAGMENT_SHADER, fragmentShaderSource);
+      const program = createProgram(glJulia, vertexShader, fragmentShader);
+
+      const positionAttributeLocation = glJulia.getAttribLocation(program, 'position');
+      const positionBuffer = glJulia.createBuffer();
+      glJulia.bindBuffer(glJulia.ARRAY_BUFFER, positionBuffer);
+      glJulia.bufferData(glJulia.ARRAY_BUFFER, new Float32Array([
+        -1, -1,
+         1, -1,
+        -1,  1,
+        -1,  1,
+         1, -1,
+         1,  1,
+      ]), glJulia.STATIC_DRAW);
+
+      glJulia.viewport(0, 0, width, height);
+      glJulia.clearColor(0, 0, 0, 0);
+      glJulia.clear(glJulia.COLOR_BUFFER_BIT);
+
+      glJulia.useProgram(program);
+
+      glJulia.enableVertexAttribArray(positionAttributeLocation);
+      glJulia.bindBuffer(glJulia.ARRAY_BUFFER, positionBuffer);
+      glJulia.vertexAttribPointer(positionAttributeLocation, 2, glJulia.FLOAT, false, 0, 0);
+
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'cr'), cr);
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'ci'), ci);
+
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'xMin'), juliaZoom.xMin);
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'xMax'), juliaZoom.xMax);
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'yMin'), juliaZoom.yMax);
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'yMax'), juliaZoom.yMin);
+
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'maxIterations'), maxIterations);
+
+      glJulia.uniform1f(glJulia.getUniformLocation(program, 'power'), juliaPower);
+
+      glJulia.drawArrays(glJulia.TRIANGLES, 0, 6);
+    }
+
+    let buttonClick = false
+
+    document.addEventListener("mousedown", (event) => {
+      buttonClick = true
+    });
+
+    document.addEventListener("mouseup", (event) => {
+      buttonClick = false
+      drawMandelbrot();
+    });
+
+    mandelbrotCanvas.addEventListener('mousemove', (e) => {
+      if (buttonClick) {
+        const rect = mandelbrotCanvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        cr = mandelbrotZoom.xMin + (mouseX / mandelbrotCanvas.width) * (mandelbrotZoom.xMax - mandelbrotZoom.xMin);
+        ci = mandelbrotZoom.yMin + (mouseY / mandelbrotCanvas.height) * (mandelbrotZoom.yMax - mandelbrotZoom.yMin);
+        drawJulia(cr, ci);
+      }
+
+    });
+
+    mandelbrotCanvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const zoomFactor = 0.9;
+      const mouseX = e.offsetX;
+      const mouseY = e.offsetY;
+      const xCenter = mandelbrotZoom.xMin + (mouseX / mandelbrotCanvas.width) * (mandelbrotZoom.xMax - mandelbrotZoom.xMin);
+      const yCenter = mandelbrotZoom.yMin + (mouseY / mandelbrotCanvas.height) * (mandelbrotZoom.yMax - mandelbrotZoom.yMin);
+
+      if (e.deltaY < 0) {
+        // Zoom in
+        mandelbrotZoom.xMin = xCenter + (mandelbrotZoom.xMin - xCenter) * zoomFactor;
+        mandelbrotZoom.xMax = xCenter + (mandelbrotZoom.xMax - xCenter) * zoomFactor;
+        mandelbrotZoom.yMin = yCenter + (mandelbrotZoom.yMin - yCenter) * zoomFactor;
+        mandelbrotZoom.yMax = yCenter + (mandelbrotZoom.yMax - yCenter) * zoomFactor;
+      } else {
+        // Zoom out
+        mandelbrotZoom.xMin = xCenter + (mandelbrotZoom.xMin - xCenter) / zoomFactor;
+        mandelbrotZoom.xMax = xCenter + (mandelbrotZoom.xMax - xCenter) / zoomFactor;
+        mandelbrotZoom.yMin = yCenter + (mandelbrotZoom.yMin - yCenter) / zoomFactor;
+        mandelbrotZoom.yMax = yCenter + (mandelbrotZoom.yMax - yCenter) / zoomFactor;
+      }
+
+      drawMandelbrot();
+    });
+
+    juliaCanvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const zoomFactor = 0.9;
+      const mouseX = e.offsetX;
+      const mouseY = e.offsetY;
+      const xCenter = juliaZoom.xMin + (mouseX / juliaCanvas.width) * (juliaZoom.xMax - juliaZoom.xMin);
+      const yCenter = juliaZoom.yMin + (mouseY / juliaCanvas.height) * (juliaZoom.yMax - juliaZoom.yMin);
+
+      if (e.deltaY < 0) {
+        // Zoom in
+        juliaZoom.xMin = xCenter + (juliaZoom.xMin - xCenter) * zoomFactor;
+        juliaZoom.xMax = xCenter + (juliaZoom.xMax - xCenter) * zoomFactor;
+        juliaZoom.yMin = yCenter + (juliaZoom.yMin - yCenter) * zoomFactor;
+        juliaZoom.yMax = yCenter + (juliaZoom.yMax - yCenter) * zoomFactor;
+      } else {
+        // Zoom out
+        juliaZoom.xMin = xCenter + (juliaZoom.xMin - xCenter) / zoomFactor;
+        juliaZoom.xMax = xCenter + (juliaZoom.xMax - xCenter) / zoomFactor;
+        juliaZoom.yMin = yCenter + (juliaZoom.yMin - yCenter) / zoomFactor;
+        juliaZoom.yMax = yCenter + (juliaZoom.yMax - yCenter) / zoomFactor;
+      }
+
+      drawJulia(cr, ci);
+    });
+
+    document.getElementById("resetZoomButton").addEventListener("click", (e) => {
+
+      mandelbrotZoom = { xMin: -2, xMax: 2, yMin: -2, yMax: 2 };
+      juliaZoom = { xMin: -2, xMax: 2, yMin: -2, yMax: 2 };
+      juliaPower = 2
+
+      drawMandelbrot();
+      drawJulia(cr, ci);
+    })
+
+    juliaPowerSlider.addEventListener('input', (e) => {
+      juliaPower = parseFloat(e.target.value);
+      juliaPowerNumber.innerText = juliaPower
+      drawJulia(cr, ci);
+    });
+
+    mandelbrotImage.addEventListener('click', (e) => {
+      var MIME_TYPE = "image/png";
+
+      var imgURL = mandelbrotCanvas.toDataURL(MIME_TYPE);
+
+      var dlLink = document.createElement('a');
+      dlLink.download = "mandelbrot_image.png";
+      dlLink.href = imgURL;
+      dlLink.dataset.downloadurl = [MIME_TYPE, dlLink.download, dlLink.href].join(':');
+
+      document.body.appendChild(dlLink);
+      dlLink.click();
+      document.body.removeChild(dlLink);
+    })
+
+    juliaImage.addEventListener('click', (e) => {
+      var MIME_TYPE = "image/png";
+
+      var imgURL = juliaCanvas.toDataURL(MIME_TYPE);
+
+      var dlLink = document.createElement('a');
+      dlLink.download = "julia_image.png";
+      dlLink.href = imgURL;
+      dlLink.dataset.downloadurl = [MIME_TYPE, dlLink.download, dlLink.href].join(':');
+
+      document.body.appendChild(dlLink);
+      dlLink.click();
+      document.body.removeChild(dlLink);
+    })
+
+    drawMandelbrot();
+    drawJulia(0, 0);
+  </script>
+</body>
+</html>

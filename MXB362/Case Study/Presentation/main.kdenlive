@@ -1,0 +1,2415 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt LC_NUMERIC="C" producer="main_bin" root="/home/braydan/uni/MXB362/Case Study/Presentation" version="7.28.0">
+ <profile colorspace="709" description="HD 1080p 25 fps" display_aspect_den="9" display_aspect_num="16" frame_rate_den="1" frame_rate_num="25" height="1080" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
+ <producer id="producer0" in="00:00:00.000" out="00:14:51.040">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">color</property>
+  <property name="kdenlive:playlistid">black_track</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <chain id="chain0" out="00:00:27.320">
+  <property name="length">684</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Intro.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">7</property>
+  <property name="kdenlive:control_uuid">{7a1dd28d-8922-453f-838c-dbdcf2ada9c9}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">915572</property>
+  <property name="kdenlive:file_hash">be049563c36218806c553ab9e7575d03</property>
+  <property name="kdenlive:audio_max0">217</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:36:38.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:36:38.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain1" out="00:00:56.160">
+  <property name="length">1405</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Overview.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">8</property>
+  <property name="kdenlive:control_uuid">{124d4442-6dfc-4412-b944-efafda1a2788}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1847594</property>
+  <property name="kdenlive:file_hash">626b4077f103a3a40798172235614929</property>
+  <property name="kdenlive:audio_max0">225</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:41:11.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:41:11.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain2" out="00:00:19.040">
+  <property name="length">477</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Project data 1.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">9</property>
+  <property name="kdenlive:control_uuid">{95fb309d-08bc-46bc-822b-e30aeb2d3025}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">648106</property>
+  <property name="kdenlive:file_hash">542f79a809be4584445e564d7bf5537b</property>
+  <property name="kdenlive:audio_max0">220</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:50:31.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:50:31.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain3" out="00:00:29.120">
+  <property name="length">729</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Project data 2.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">10</property>
+  <property name="kdenlive:control_uuid">{3b25ec62-f13a-4a9f-9478-f1556772b2fc}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">973492</property>
+  <property name="kdenlive:file_hash">7fdc7abb7edeca542f25528863e11f8e</property>
+  <property name="kdenlive:audio_max0">223</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:52:29.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:52:29.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain4" out="00:00:22.800">
+  <property name="length">571</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Project data 3.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">11</property>
+  <property name="kdenlive:control_uuid">{1919c79c-cc42-4e8e-a8b9-b974094e303b}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">770126</property>
+  <property name="kdenlive:file_hash">70d4f97d9e060806d048616b8d0268ad</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:59:24.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:59:24.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain5" out="00:00:43.000">
+  <property name="length">1076</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation techniques 1.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">23</property>
+  <property name="kdenlive:control_uuid">{51215d9c-ae83-464d-a90a-e9cce74a7a0c}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1422256</property>
+  <property name="kdenlive:file_hash">25304b02f2dd987c4e75b734d624521c</property>
+  <property name="kdenlive:audio_max0">227</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:01:50.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:01:50.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain6" out="00:00:23.320">
+  <property name="length">584</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation techniques 2.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">24</property>
+  <property name="kdenlive:control_uuid">{222143fe-0057-41b9-9590-b0576bea816d}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">786674</property>
+  <property name="kdenlive:file_hash">5db53b936ba4e0cf86074f9cc974bc3b</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256004</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:06:25.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:06:25.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain7" out="00:00:24.440">
+  <property name="length">612</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation environment 1.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">21</property>
+  <property name="kdenlive:control_uuid">{7c8f798b-d67c-4484-8078-c832f8a3e7fc}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">823199</property>
+  <property name="kdenlive:file_hash">aba182768d9943cd9aa99b62587350c0</property>
+  <property name="kdenlive:audio_max0">217</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:31:00.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:31:00.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain8" out="00:00:38.480">
+  <property name="length">963</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation environment 2.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">22</property>
+  <property name="kdenlive:control_uuid">{4035232f-6e4f-4cd7-88a2-edd57fff2bc1}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1276119</property>
+  <property name="kdenlive:file_hash">b7e499b175c4f5f2fd6084c42b559384</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="kdenlive:monitorPosition">0</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:34:01.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:34:01.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain9" out="00:00:34.760">
+  <property name="length">870</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Background 1.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">4</property>
+  <property name="kdenlive:control_uuid">{61eda8ca-9ae6-4753-801b-20428e210593}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1156167</property>
+  <property name="kdenlive:file_hash">6b3e1f4779d4506f94ce0b8ed4f88740</property>
+  <property name="kdenlive:audio_max0">222</property>
+  <property name="kdenlive:monitorPosition">0</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:37:58.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:37:58.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain10" out="00:00:28.720">
+  <property name="length">719</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Background 2.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:control_uuid">{9bf3ea6b-b3e3-40d4-9a39-fd73603b44d6}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">961084</property>
+  <property name="kdenlive:file_hash">898261d443a1e501151346e9add410e3</property>
+  <property name="kdenlive:audio_max0">223</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:38:31.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:38:31.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain11" out="00:00:31.080">
+  <property name="length">778</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 1.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">13</property>
+  <property name="kdenlive:control_uuid">{6d6e9852-c35a-416d-b548-3fd4eb87809f}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1037592</property>
+  <property name="kdenlive:file_hash">257f57ee8d9bcf61bd7e95a2476fc9f8</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:42:01.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:42:01.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain12" out="00:00:13.120">
+  <property name="length">329</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 2.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">14</property>
+  <property name="kdenlive:control_uuid">{72c9ba85-0092-4307-b886-78ddd2783e1c}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">457159</property>
+  <property name="kdenlive:file_hash">db77a46ffcb0470d1a6ecd27e7a91444</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:42:18.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:42:18.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain13" out="00:00:25.800">
+  <property name="length">646</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 3.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">15</property>
+  <property name="kdenlive:control_uuid">{afde7f35-3d5d-4902-b048-7051f1dc74df}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">867318</property>
+  <property name="kdenlive:file_hash">5cf72340500aed61a7fdad309f9cdf14</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:43:45.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:43:45.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain14" out="00:00:30.640">
+  <property name="length">767</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 4.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">16</property>
+  <property name="kdenlive:control_uuid">{e05d5ba4-b588-4e39-a602-baec20a70cbb}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1023811</property>
+  <property name="kdenlive:file_hash">1cb5edea975db92ec605ba98edb92564</property>
+  <property name="kdenlive:audio_max0">223</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:45:01.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:45:01.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain15" out="00:00:31.040">
+  <property name="length">777</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 5.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">17</property>
+  <property name="kdenlive:control_uuid">{3934a245-ace9-42f0-8d96-05adc6cff117}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1036215</property>
+  <property name="kdenlive:file_hash">1f3e8e9fad438adb2d314261307248ea</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:46:05.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:46:05.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain16" out="00:00:18.240">
+  <property name="length">457</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 6.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">18</property>
+  <property name="kdenlive:control_uuid">{87976d21-43df-4bdd-95c1-7ee9d7a92d5a}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">622611</property>
+  <property name="kdenlive:file_hash">6e943d31c29ce15c77ead98ee963cbfe</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:52:10.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:52:10.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain17" out="00:00:20.520">
+  <property name="length">514</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 7.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">19</property>
+  <property name="kdenlive:control_uuid">{46af9f65-d9fd-485f-986c-49a7b6ec6599}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">696360</property>
+  <property name="kdenlive:file_hash">be384a87ad2a57f25ed2cc00d875b16b</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:52:40.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:52:40.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain18" out="00:00:10.760">
+  <property name="length">270</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 8.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">20</property>
+  <property name="kdenlive:control_uuid">{9d62f46e-74e6-4a3a-8c9a-08e8c9ccbb03}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">381326</property>
+  <property name="kdenlive:file_hash">3b784224999de496d0ea6502e941d027</property>
+  <property name="kdenlive:audio_max0">217</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:53:31.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:53:31.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain19" out="00:00:53.080">
+  <property name="length">1328</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Reflection.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">12</property>
+  <property name="kdenlive:control_uuid">{af6f4215-73b5-4ef9-9062-b7215a803060}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1748334</property>
+  <property name="kdenlive:file_hash">d0920abd8fade9438c6cb1d0a61d18e2</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256004</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:54:39.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:54:39.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <chain id="chain20" out="00:00:32.920">
+  <property name="length">824</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Conclusion.m4a</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">6</property>
+  <property name="kdenlive:control_uuid">{3f4f09d8-a9f6-478e-bfa8-d1dbb69d6825}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1096890</property>
+  <property name="kdenlive:file_hash">08edc382b8d34f1e6155d0b5353ca13a</property>
+  <property name="kdenlive:audio_max0">230</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256004</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:57:14.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:57:14.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <playlist id="playlist0">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:01.280" out="00:00:25.960" producer="chain0">
+   <property name="kdenlive:id">7</property>
+  </entry>
+  <entry in="00:00:01.440" out="00:00:08.640" producer="chain1">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry in="00:00:09.160" out="00:00:21.760" producer="chain1">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry in="00:00:22.520" out="00:00:55.560" producer="chain1">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry in="00:00:00.600" out="00:00:18.320" producer="chain2">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry in="00:00:00.800" out="00:00:28.680" producer="chain3">
+   <property name="kdenlive:id">10</property>
+  </entry>
+  <entry in="00:00:01.480" out="00:00:22.800" producer="chain4">
+   <property name="kdenlive:id">11</property>
+  </entry>
+  <entry in="00:00:00.880" out="00:00:42.240" producer="chain5">
+   <property name="kdenlive:id">23</property>
+  </entry>
+  <entry in="00:00:00.720" out="00:00:21.160" producer="chain6">
+   <property name="kdenlive:id">24</property>
+  </entry>
+  <entry in="00:00:21.520" out="00:00:22.960" producer="chain6">
+   <property name="kdenlive:id">24</property>
+  </entry>
+  <entry in="00:00:00.640" out="00:00:24.040" producer="chain7">
+   <property name="kdenlive:id">21</property>
+  </entry>
+  <entry in="00:00:00.760" out="00:00:37.880" producer="chain8">
+   <property name="kdenlive:id">22</property>
+  </entry>
+  <entry in="00:00:01.520" out="00:00:34.000" producer="chain9">
+   <property name="kdenlive:id">4</property>
+  </entry>
+  <entry in="00:00:01.320" out="00:00:28.560" producer="chain10">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:00:01.480" out="00:00:30.880" producer="chain11">
+   <property name="kdenlive:id">13</property>
+  </entry>
+  <entry in="00:00:00.640" out="00:00:13.120" producer="chain12">
+   <property name="kdenlive:id">14</property>
+  </entry>
+  <entry in="00:00:00.920" out="00:00:25.800" producer="chain13">
+   <property name="kdenlive:id">15</property>
+  </entry>
+  <entry in="00:00:00.720" out="00:00:30.640" producer="chain14">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry in="00:00:00.560" out="00:00:28.440" producer="chain15">
+   <property name="kdenlive:id">17</property>
+  </entry>
+  <entry in="00:00:28.880" out="00:00:31.040" producer="chain15">
+   <property name="kdenlive:id">17</property>
+  </entry>
+  <entry in="00:00:01.080" out="00:00:18.240" producer="chain16">
+   <property name="kdenlive:id">18</property>
+  </entry>
+  <entry in="00:00:00.680" out="00:00:20.520" producer="chain17">
+   <property name="kdenlive:id">19</property>
+  </entry>
+  <entry in="00:00:01.360" out="00:00:10.760" producer="chain18">
+   <property name="kdenlive:id">20</property>
+  </entry>
+  <entry in="00:00:00.000" out="00:00:53.080" producer="chain19">
+   <property name="kdenlive:id">12</property>
+  </entry>
+  <entry in="00:00:01.760" out="00:00:32.680" producer="chain20">
+   <property name="kdenlive:id">6</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist1">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <tractor id="tractor0" in="00:00:00.000" out="00:09:46.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">75</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="video" producer="playlist0"/>
+  <track hide="video" producer="playlist1"/>
+  <filter id="filter0">
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="mlt_service">volume</property>
+   <property name="internal_added">237</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter1">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter2">
+   <property name="iec_scale">0</property>
+   <property name="mlt_service">audiolevel</property>
+   <property name="dbpeak">1</property>
+   <property name="disable">1</property>
+  </filter>
+ </tractor>
+ <playlist id="playlist2">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <playlist id="playlist3">
+  <property name="kdenlive:audio_track">1</property>
+ </playlist>
+ <tractor id="tractor1" in="00:00:00.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">75</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="video" producer="playlist2"/>
+  <track hide="video" producer="playlist3"/>
+  <filter id="filter3">
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="mlt_service">volume</property>
+   <property name="internal_added">237</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter4">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter5">
+   <property name="iec_scale">0</property>
+   <property name="mlt_service">audiolevel</property>
+   <property name="dbpeak">1</property>
+   <property name="disable">1</property>
+  </filter>
+ </tractor>
+ <chain id="chain21" out="00:03:11.880">
+  <property name="length">4798</property>
+  <property name="eof">pause</property>
+  <property name="resource">Interactive Exploration of Fractal Geometry Linking the Mandelbrot and Julia Sets through Real-Time Visualization.mp4</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="format">3</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="vstream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">25</property>
+  <property name="kdenlive:control_uuid">{c7e54716-2696-4b9b-8373-64cf4f283bd8}</property>
+  <property name="mute_on_pause">0</property>
+  <property name="kdenlive:clip_type">2</property>
+  <property name="kdenlive:file_size">29163446</property>
+  <property name="kdenlive:file_hash">a0671824404ff81a32ec43de50a4ed16</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">60</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1920</property>
+  <property name="meta.media.0.codec.height">1080</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.color_trc">1</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">1209730</property>
+  <property name="meta.attr.0.stream.handler_name.markup">VideoHandler</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">isom</property>
+  <property name="meta.attr.minor_version.markup">512</property>
+  <property name="meta.attr.compatible_brands.markup">isomiso2avc1mp41</property>
+  <property name="meta.attr.encoder.markup">Lavf58.76.100</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">60</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">1</property>
+  <property name="meta.media.has_b_frames">2</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="meta.media.aspect_ratio">1</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">1</property>
+  <property name="set.test_image">0</property>
+ </chain>
+ <producer id="producer1" in="00:00:00.000" out="00:00:04.960">
+  <property name="length">00:00:05.000</property>
+  <property name="eof">pause</property>
+  <property name="resource">Interactive Exploration of Fractal Geometry Linking the Mandelbrot and Julia Sets through Real-Time Visualization.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="format">2</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:duration">00:00:05:00</property>
+  <property name="xml">was here</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">26</property>
+  <property name="kdenlive:control_uuid">{4fb35ec1-e202-43a6-bd96-be21daaa761c}</property>
+  <property name="kdenlive:clip_type">2</property>
+  <property name="kdenlive:file_size">209641</property>
+  <property name="kdenlive:file_hash">0995a7f4464c3e529c3e16591c1e19b8</property>
+ </producer>
+ <playlist id="playlist4">
+  <entry in="00:00:00.000" out="00:00:05.160" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:05.200" out="00:00:09.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:05.200" out="00:00:09.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:05.200" out="00:00:09.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:05.200" out="00:00:09.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:05.200" out="00:00:05.800" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:10.160" out="00:00:14.680" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:10.160" out="00:00:14.680" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:10.160" out="00:00:14.680" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:10.160" out="00:00:14.680" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:10.160" out="00:00:14.680" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:10.160" out="00:00:14.680" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:15.040" out="00:00:40.600" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:49.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:45.400" out="00:00:46.400" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:55.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:50.840" out="00:00:52.560" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:01:00.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:55.640" out="00:00:56.400" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:04.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:00.880" out="00:01:01.840" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <blank length="00:00:00.520"/>
+  <entry in="00:01:05.480" out="00:02:23.200" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:01:05.480" out="00:01:24.000" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:23.240" out="00:02:50.960" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:23.240" out="00:02:50.960" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:23.240" out="00:02:44.320" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:52.880" out="00:02:56.880" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:57.160" out="00:03:01.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:57.160" out="00:03:01.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:57.160" out="00:03:01.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:57.160" out="00:03:01.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:57.160" out="00:03:01.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:02:57.160" out="00:02:58.760" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:06.360" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:03:02.160" out="00:03:03.400" producer="chain21">
+   <property name="kdenlive:id">25</property>
+  </entry>
+  <entry in="00:00:00.000" out="00:00:04.960" producer="producer1">
+   <property name="kdenlive:id">26</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist5"/>
+ <tractor id="tractor2" in="00:00:00.000" out="00:09:51.000">
+  <property name="kdenlive:trackheight">75</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist4"/>
+  <track hide="audio" producer="playlist5"/>
+ </tractor>
+ <playlist id="playlist6"/>
+ <playlist id="playlist7"/>
+ <tractor id="tractor3" in="00:00:00.000">
+  <property name="kdenlive:trackheight">75</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist6"/>
+  <track hide="audio" producer="playlist7"/>
+ </tractor>
+ <tractor id="{0b45db51-c697-44b0-9367-a9abb0d7a7cf}" in="00:00:00.000" out="00:09:51.000">
+  <property name="kdenlive:uuid">{0b45db51-c697-44b0-9367-a9abb0d7a7cf}</property>
+  <property name="kdenlive:clipname">Sequence 1</property>
+  <property name="kdenlive:sequenceproperties.hasAudio">1</property>
+  <property name="kdenlive:sequenceproperties.hasVideo">1</property>
+  <property name="kdenlive:sequenceproperties.activeTrack">2</property>
+  <property name="kdenlive:sequenceproperties.tracksCount">4</property>
+  <property name="kdenlive:sequenceproperties.documentuuid">{0b45db51-c697-44b0-9367-a9abb0d7a7cf}</property>
+  <property name="kdenlive:control_uuid">{0b45db51-c697-44b0-9367-a9abb0d7a7cf}</property>
+  <property name="kdenlive:duration">00:09:51.040</property>
+  <property name="kdenlive:maxduration">14776</property>
+  <property name="kdenlive:producer_type">17</property>
+  <property name="kdenlive:id">3</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:file_hash">a1ddae46e3d5f9677644d2d81b63889c</property>
+  <property name="kdenlive:folderid">2</property>
+  <property name="kdenlive:sequenceproperties.audioTarget">1</property>
+  <property name="kdenlive:sequenceproperties.disablepreview">0</property>
+  <property name="kdenlive:sequenceproperties.position">3665</property>
+  <property name="kdenlive:sequenceproperties.scrollPos">1466</property>
+  <property name="kdenlive:sequenceproperties.tracks">4</property>
+  <property name="kdenlive:sequenceproperties.verticalzoom">1</property>
+  <property name="kdenlive:sequenceproperties.videoTarget">2</property>
+  <property name="kdenlive:sequenceproperties.zonein">0</property>
+  <property name="kdenlive:sequenceproperties.zoneout">75</property>
+  <property name="kdenlive:sequenceproperties.zoom">5</property>
+  <property name="kdenlive:sequenceproperties.groups">[
+]
+</property>
+  <property name="kdenlive:sequenceproperties.guides">[
+]
+</property>
+  <track producer="producer0"/>
+  <track producer="tractor0"/>
+  <track producer="tractor1"/>
+  <track producer="tractor2"/>
+  <track producer="tractor3"/>
+  <transition id="transition0">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition1">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition2">
+   <property name="a_track">0</property>
+   <property name="b_track">3</property>
+   <property name="compositing">0</property>
+   <property name="distort">0</property>
+   <property name="rotate_center">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">0</property>
+   <property name="b_track">4</property>
+   <property name="compositing">0</property>
+   <property name="distort">0</property>
+   <property name="rotate_center">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+  </transition>
+  <filter id="filter6">
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="mlt_service">volume</property>
+   <property name="internal_added">237</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter7">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
+   <property name="disable">1</property>
+  </filter>
+ </tractor>
+ <chain id="chain22" out="00:00:34.760">
+  <property name="length">870</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Background 1.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:37:58.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:37:58.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">4</property>
+  <property name="kdenlive:control_uuid">{61eda8ca-9ae6-4753-801b-20428e210593}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1156167</property>
+  <property name="kdenlive:file_hash">6b3e1f4779d4506f94ce0b8ed4f88740</property>
+  <property name="kdenlive:audio_max0">222</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain23" out="00:00:28.720">
+  <property name="length">719</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Background 2.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:38:31.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:38:31.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:control_uuid">{9bf3ea6b-b3e3-40d4-9a39-fd73603b44d6}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">961084</property>
+  <property name="kdenlive:file_hash">898261d443a1e501151346e9add410e3</property>
+  <property name="kdenlive:audio_max0">223</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain24" out="00:00:32.920">
+  <property name="length">824</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Conclusion.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256004</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:57:14.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:57:14.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">6</property>
+  <property name="kdenlive:control_uuid">{3f4f09d8-a9f6-478e-bfa8-d1dbb69d6825}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1096890</property>
+  <property name="kdenlive:file_hash">08edc382b8d34f1e6155d0b5353ca13a</property>
+  <property name="kdenlive:audio_max0">230</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain25" out="00:00:27.320">
+  <property name="length">684</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Intro.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:36:38.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:36:38.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">7</property>
+  <property name="kdenlive:control_uuid">{7a1dd28d-8922-453f-838c-dbdcf2ada9c9}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">915572</property>
+  <property name="kdenlive:file_hash">be049563c36218806c553ab9e7575d03</property>
+  <property name="kdenlive:audio_max0">217</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain26" out="00:00:56.160">
+  <property name="length">1405</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Overview.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:41:11.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:41:11.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">8</property>
+  <property name="kdenlive:control_uuid">{124d4442-6dfc-4412-b944-efafda1a2788}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1847594</property>
+  <property name="kdenlive:file_hash">626b4077f103a3a40798172235614929</property>
+  <property name="kdenlive:audio_max0">225</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain27" out="00:00:19.040">
+  <property name="length">477</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Project data 1.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:50:31.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:50:31.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">9</property>
+  <property name="kdenlive:control_uuid">{95fb309d-08bc-46bc-822b-e30aeb2d3025}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">648106</property>
+  <property name="kdenlive:file_hash">542f79a809be4584445e564d7bf5537b</property>
+  <property name="kdenlive:audio_max0">220</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain28" out="00:00:29.120">
+  <property name="length">729</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Project data 2.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:52:29.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:52:29.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">10</property>
+  <property name="kdenlive:control_uuid">{3b25ec62-f13a-4a9f-9478-f1556772b2fc}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">973492</property>
+  <property name="kdenlive:file_hash">7fdc7abb7edeca542f25528863e11f8e</property>
+  <property name="kdenlive:audio_max0">223</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain29" out="00:00:22.800">
+  <property name="length">571</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Project data 3.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T05:59:24.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T05:59:24.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">11</property>
+  <property name="kdenlive:control_uuid">{1919c79c-cc42-4e8e-a8b9-b974094e303b}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">770126</property>
+  <property name="kdenlive:file_hash">70d4f97d9e060806d048616b8d0268ad</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain30" out="00:00:53.080">
+  <property name="length">1328</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Reflection.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256004</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:54:39.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:54:39.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">12</property>
+  <property name="kdenlive:control_uuid">{af6f4215-73b5-4ef9-9062-b7215a803060}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1748334</property>
+  <property name="kdenlive:file_hash">d0920abd8fade9438c6cb1d0a61d18e2</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain31" out="00:00:31.080">
+  <property name="length">778</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 1.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:42:01.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:42:01.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">13</property>
+  <property name="kdenlive:control_uuid">{6d6e9852-c35a-416d-b548-3fd4eb87809f}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1037592</property>
+  <property name="kdenlive:file_hash">257f57ee8d9bcf61bd7e95a2476fc9f8</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain32" out="00:00:13.120">
+  <property name="length">329</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 2.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:42:18.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:42:18.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">14</property>
+  <property name="kdenlive:control_uuid">{72c9ba85-0092-4307-b886-78ddd2783e1c}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">457159</property>
+  <property name="kdenlive:file_hash">db77a46ffcb0470d1a6ecd27e7a91444</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain33" out="00:00:25.800">
+  <property name="length">646</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 3.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:43:45.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:43:45.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">15</property>
+  <property name="kdenlive:control_uuid">{afde7f35-3d5d-4902-b048-7051f1dc74df}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">867318</property>
+  <property name="kdenlive:file_hash">5cf72340500aed61a7fdad309f9cdf14</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain34" out="00:00:30.640">
+  <property name="length">767</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 4.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:45:01.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:45:01.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">16</property>
+  <property name="kdenlive:control_uuid">{e05d5ba4-b588-4e39-a602-baec20a70cbb}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1023811</property>
+  <property name="kdenlive:file_hash">1cb5edea975db92ec605ba98edb92564</property>
+  <property name="kdenlive:audio_max0">223</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain35" out="00:00:31.040">
+  <property name="length">777</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 5.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:46:05.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:46:05.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">17</property>
+  <property name="kdenlive:control_uuid">{3934a245-ace9-42f0-8d96-05adc6cff117}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1036215</property>
+  <property name="kdenlive:file_hash">1f3e8e9fad438adb2d314261307248ea</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain36" out="00:00:18.240">
+  <property name="length">457</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 6.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:52:10.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:52:10.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">18</property>
+  <property name="kdenlive:control_uuid">{87976d21-43df-4bdd-95c1-7ee9d7a92d5a}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">622611</property>
+  <property name="kdenlive:file_hash">6e943d31c29ce15c77ead98ee963cbfe</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain37" out="00:00:20.520">
+  <property name="length">514</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 7.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:52:40.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:52:40.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">19</property>
+  <property name="kdenlive:control_uuid">{46af9f65-d9fd-485f-986c-49a7b6ec6599}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">696360</property>
+  <property name="kdenlive:file_hash">be384a87ad2a57f25ed2cc00d875b16b</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain38" out="00:00:10.760">
+  <property name="length">270</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Results 8.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:53:31.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:53:31.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">20</property>
+  <property name="kdenlive:control_uuid">{9d62f46e-74e6-4a3a-8c9a-08e8c9ccbb03}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">381326</property>
+  <property name="kdenlive:file_hash">3b784224999de496d0ea6502e941d027</property>
+  <property name="kdenlive:audio_max0">217</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain39" out="00:00:24.440">
+  <property name="length">612</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation environment 1.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:31:00.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:31:00.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">21</property>
+  <property name="kdenlive:control_uuid">{7c8f798b-d67c-4484-8078-c832f8a3e7fc}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">823199</property>
+  <property name="kdenlive:file_hash">aba182768d9943cd9aa99b62587350c0</property>
+  <property name="kdenlive:audio_max0">217</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain40" out="00:00:38.480">
+  <property name="length">963</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation environment 2.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:34:01.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:34:01.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">22</property>
+  <property name="kdenlive:control_uuid">{4035232f-6e4f-4cd7-88a2-edd57fff2bc1}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1276119</property>
+  <property name="kdenlive:file_hash">b7e499b175c4f5f2fd6084c42b559384</property>
+  <property name="kdenlive:audio_max0">216</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain41" out="00:00:43.000">
+  <property name="length">1076</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation techniques 1.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256003</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:01:50.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:01:50.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">23</property>
+  <property name="kdenlive:control_uuid">{51215d9c-ae83-464d-a90a-e9cce74a7a0c}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">1422256</property>
+  <property name="kdenlive:file_hash">25304b02f2dd987c4e75b734d624521c</property>
+  <property name="kdenlive:audio_max0">227</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain42" out="00:00:23.320">
+  <property name="length">584</property>
+  <property name="eof">pause</property>
+  <property name="resource">voice/Visualisation techniques 2.m4a</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">1</property>
+  <property name="meta.media.0.codec.layout">mono</property>
+  <property name="meta.media.0.codec.name">aac</property>
+  <property name="meta.media.0.codec.long_name">AAC (Advanced Audio Coding)</property>
+  <property name="meta.media.0.codec.bit_rate">256004</property>
+  <property name="meta.attr.0.stream.creation_time.markup">2024-10-13T06:06:25.000000Z</property>
+  <property name="meta.attr.0.stream.language.markup">eng</property>
+  <property name="meta.attr.0.stream.handler_name.markup">SoundHandle</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">3gp4</property>
+  <property name="meta.attr.minor_version.markup">0</property>
+  <property name="meta.attr.compatible_brands.markup">isom3gp4</property>
+  <property name="meta.attr.creation_time.markup">2024-10-13T06:06:25.000000Z</property>
+  <property name="meta.attr.com.android.version.markup">14</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">24</property>
+  <property name="kdenlive:control_uuid">{222143fe-0057-41b9-9590-b0576bea816d}</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">786674</property>
+  <property name="kdenlive:file_hash">5db53b936ba4e0cf86074f9cc974bc3b</property>
+  <property name="kdenlive:audio_max0">215</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <chain id="chain43" out="00:03:11.880">
+  <property name="length">4798</property>
+  <property name="eof">pause</property>
+  <property name="resource">Interactive Exploration of Fractal Geometry Linking the Mandelbrot and Julia Sets through Real-Time Visualization.mp4</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">60</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">1920</property>
+  <property name="meta.media.0.codec.height">1080</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">709</property>
+  <property name="meta.media.0.codec.color_trc">1</property>
+  <property name="meta.media.0.codec.name">h264</property>
+  <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+  <property name="meta.media.0.codec.bit_rate">1209730</property>
+  <property name="meta.attr.0.stream.handler_name.markup">VideoHandler</property>
+  <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+  <property name="meta.attr.major_brand.markup">isom</property>
+  <property name="meta.attr.minor_version.markup">512</property>
+  <property name="meta.attr.compatible_brands.markup">isomiso2avc1mp41</property>
+  <property name="meta.attr.encoder.markup">Lavf58.76.100</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="format">3</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="vstream">0</property>
+  <property name="meta.media.frame_rate_num">60</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">1</property>
+  <property name="meta.media.has_b_frames">2</property>
+  <property name="meta.media.width">1920</property>
+  <property name="meta.media.height">1080</property>
+  <property name="meta.media.aspect_ratio">1</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">25</property>
+  <property name="kdenlive:control_uuid">{c7e54716-2696-4b9b-8373-64cf4f283bd8}</property>
+  <property name="mute_on_pause">0</property>
+  <property name="kdenlive:clip_type">2</property>
+  <property name="kdenlive:file_size">29163446</property>
+  <property name="kdenlive:file_hash">a0671824404ff81a32ec43de50a4ed16</property>
+  <property name="kdenlive:monitorPosition">0</property>
+ </chain>
+ <playlist id="main_bin">
+  <property name="kdenlive:folder.-1.2">Sequences</property>
+  <property name="kdenlive:sequenceFolder">2</property>
+  <property name="kdenlive:docproperties.audioChannels">2</property>
+  <property name="kdenlive:docproperties.binsort">0</property>
+  <property name="kdenlive:docproperties.browserurl">/home/braydan/</property>
+  <property name="kdenlive:docproperties.documentid">1728804864102</property>
+  <property name="kdenlive:docproperties.enableTimelineZone">0</property>
+  <property name="kdenlive:docproperties.enableexternalproxy">0</property>
+  <property name="kdenlive:docproperties.enableproxy">0</property>
+  <property name="kdenlive:docproperties.externalproxyparams"/>
+  <property name="kdenlive:docproperties.generateimageproxy">0</property>
+  <property name="kdenlive:docproperties.generateproxy">0</property>
+  <property name="kdenlive:docproperties.guidesCategories">[
+    {
+        "color": "#9b59b6",
+        "comment": "Category 1",
+        "index": 0
+    },
+    {
+        "color": "#3daee9",
+        "comment": "Category 2",
+        "index": 1
+    },
+    {
+        "color": "#1abc9c",
+        "comment": "Category 3",
+        "index": 2
+    },
+    {
+        "color": "#1cdc9a",
+        "comment": "Category 4",
+        "index": 3
+    },
+    {
+        "color": "#c9ce3b",
+        "comment": "Category 5",
+        "index": 4
+    },
+    {
+        "color": "#fdbc4b",
+        "comment": "Category 6",
+        "index": 5
+    },
+    {
+        "color": "#f39c1f",
+        "comment": "Category 7",
+        "index": 6
+    },
+    {
+        "color": "#f47750",
+        "comment": "Category 8",
+        "index": 7
+    },
+    {
+        "color": "#da4453",
+        "comment": "Category 9",
+        "index": 8
+    }
+]
+</property>
+  <property name="kdenlive:docproperties.kdenliveversion">24.08.2</property>
+  <property name="kdenlive:docproperties.previewextension"/>
+  <property name="kdenlive:docproperties.previewparameters"/>
+  <property name="kdenlive:docproperties.profile">atsc_1080p_25</property>
+  <property name="kdenlive:docproperties.proxyextension"/>
+  <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
+  <property name="kdenlive:docproperties.proxyimagesize">800</property>
+  <property name="kdenlive:docproperties.proxyminsize">1000</property>
+  <property name="kdenlive:docproperties.proxyparams"/>
+  <property name="kdenlive:docproperties.proxyresize">640</property>
+  <property name="kdenlive:docproperties.seekOffset">30000</property>
+  <property name="kdenlive:docproperties.uuid">{0b45db51-c697-44b0-9367-a9abb0d7a7cf}</property>
+  <property name="kdenlive:docproperties.version">1.1</property>
+  <property name="kdenlive:expandedFolders"/>
+  <property name="kdenlive:binZoom">4</property>
+  <property name="kdenlive:extraBins">project_bin:-1:0</property>
+  <property name="kdenlive:documentnotes"/>
+  <property name="kdenlive:documentnotesversion">2</property>
+  <property name="kdenlive:docproperties.opensequences">{0b45db51-c697-44b0-9367-a9abb0d7a7cf}</property>
+  <property name="kdenlive:docproperties.activetimeline">{0b45db51-c697-44b0-9367-a9abb0d7a7cf}</property>
+  <property name="kdenlive:docproperties.rendercategory">Generic (HD for web, mobile devices...)</property>
+  <property name="kdenlive:docproperties.rendercustomquality">-1</property>
+  <property name="kdenlive:docproperties.renderendguide">-1</property>
+  <property name="kdenlive:docproperties.renderexportaudio">0</property>
+  <property name="kdenlive:docproperties.renderfullcolorrange">0</property>
+  <property name="kdenlive:docproperties.rendermode">0</property>
+  <property name="kdenlive:docproperties.renderplay">0</property>
+  <property name="kdenlive:docproperties.renderpreview">0</property>
+  <property name="kdenlive:docproperties.renderprofile">MP4-H264/AAC</property>
+  <property name="kdenlive:docproperties.renderrescale">0</property>
+  <property name="kdenlive:docproperties.renderrescaleheight">540</property>
+  <property name="kdenlive:docproperties.renderrescalewidth">960</property>
+  <property name="kdenlive:docproperties.renderspeed">6</property>
+  <property name="kdenlive:docproperties.renderstartguide">-1</property>
+  <property name="kdenlive:docproperties.rendertcoverlay">0</property>
+  <property name="kdenlive:docproperties.rendertctype">-1</property>
+  <property name="kdenlive:docproperties.rendertwopass">0</property>
+  <property name="kdenlive:docproperties.renderurl">/home/braydan/Videos/main.mp4</property>
+  <property name="xml_retain">1</property>
+  <entry in="00:00:00.000" out="00:00:00.000" producer="{0b45db51-c697-44b0-9367-a9abb0d7a7cf}"/>
+  <entry in="00:00:00.000" out="00:00:34.760" producer="chain22"/>
+  <entry in="00:00:00.000" out="00:00:28.720" producer="chain23"/>
+  <entry in="00:00:00.000" out="00:00:32.920" producer="chain24"/>
+  <entry in="00:00:00.000" out="00:00:27.320" producer="chain25"/>
+  <entry in="00:00:00.000" out="00:00:56.160" producer="chain26"/>
+  <entry in="00:00:00.000" out="00:00:19.040" producer="chain27"/>
+  <entry in="00:00:00.000" out="00:00:29.120" producer="chain28"/>
+  <entry in="00:00:00.000" out="00:00:22.800" producer="chain29"/>
+  <entry in="00:00:00.000" out="00:00:53.080" producer="chain30"/>
+  <entry in="00:00:00.000" out="00:00:31.080" producer="chain31"/>
+  <entry in="00:00:00.000" out="00:00:13.120" producer="chain32"/>
+  <entry in="00:00:00.000" out="00:00:25.800" producer="chain33"/>
+  <entry in="00:00:00.000" out="00:00:30.640" producer="chain34"/>
+  <entry in="00:00:00.000" out="00:00:31.040" producer="chain35"/>
+  <entry in="00:00:00.000" out="00:00:18.240" producer="chain36"/>
+  <entry in="00:00:00.000" out="00:00:20.520" producer="chain37"/>
+  <entry in="00:00:00.000" out="00:00:10.760" producer="chain38"/>
+  <entry in="00:00:00.000" out="00:00:24.440" producer="chain39"/>
+  <entry in="00:00:00.000" out="00:00:38.480" producer="chain40"/>
+  <entry in="00:00:00.000" out="00:00:43.000" producer="chain41"/>
+  <entry in="00:00:00.000" out="00:00:23.320" producer="chain42"/>
+  <entry in="00:00:00.000" out="00:03:11.880" producer="chain43"/>
+  <entry in="00:00:00.000" out="00:00:04.960" producer="producer1"/>
+ </playlist>
+ <tractor id="tractor4" in="00:00:00.000" out="00:09:51.000">
+  <property name="kdenlive:projectTractor">1</property>
+  <track in="00:00:00.000" out="00:09:51.000" producer="{0b45db51-c697-44b0-9367-a9abb0d7a7cf}"/>
+ </tractor>
+</mlt>

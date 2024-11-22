@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}Vulnerability Management}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Introduction to Vulnerability Scanning and Prioritisation}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Role of NVD in Vulnerability Scanning and Prioritisation}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Identification, Assessment and Prioritisation of Vulnerable Services}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Complementary Controls for Vulnerability Scanning and Prioritisation}{4}{}%
+\contentsline {section}{\numberline {2}Intrusion Detection System}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Introduction to Intrusion Detection System - Snort}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Different ways to use or deploy Snort}{4}{}%
+\contentsline {paragraph}{Deployment methods for Snort}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Logging and Monitoring Snort Alerts}{7}{}%
+\contentsline {subsection}{\numberline {2.4}Detecting Risks and Attacks using Snort}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Complementary Controls for IDS}{12}{}%
+\contentsline {section}{\numberline {3}Proxies}{12}{}%
+\contentsline {subsection}{\numberline {3.1}Main purposes of Proxy}{12}{}%
+\contentsline {subsection}{\numberline {3.2}Remaining Risk}{15}{}%
+\contentsline {subsection}{\numberline {3.3}Complementary Controls to Proxy}{15}{}%
+\contentsline {section}{\numberline {4}Security Information and Event Management (SIEM)}{16}{}%
+\contentsline {subsection}{\numberline {4.1}Introduction to SIEM}{16}{}%
+\contentsline {subsection}{\numberline {4.2}Wazuh as SIEM}{16}{}%
+\contentsline {paragraph}{Features Supporting Security Monitoring and Threat Management}{17}{}%
+\contentsline {subsection}{\numberline {4.3}Enhancing network security with threat intelligence}{18}{}%
+\contentsline {paragraph}{Threat Intelligence and Its Role in Network Security}{18}{}%
+\contentsline {paragraph}{MITRE ATT\&CK Framework and Its Role in Threat Intelligence}{19}{}%
+\contentsline {subsection}{\numberline {4.4}Identifying network attack techniques with MITRE ATT\&CK}{19}{}%
+\contentsline {paragraph}{Adversary Groups Using Password Spraying}{19}{}%
+\contentsline {paragraph}{Mitigation Strategies for Password Spraying}{19}{}%
+\contentsline {paragraph}{Software Tools Used in Password Spraying Attacks}{20}{}%
+\contentsline {paragraph}{Adversary Groups Using Authentication Package}{23}{}%
+\contentsline {paragraph}{Mitigation Strategies For Authentication Package}{23}{}%
+\contentsline {paragraph}{Software Tools Used in Authentication Package Attack}{23}{}%
+\contentsline {subsection}{\numberline {4.5}Complementary Control to SIEM and Threat Intel}{24}{}%

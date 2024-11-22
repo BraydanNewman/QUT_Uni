@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {0.1}Introduction}{2}{}%
+\contentsline {section}{\numberline {0.2}Purpose of the Empirical Study}{2}{}%
+\contentsline {section}{\numberline {0.3}Efficiency Metric to be Measured}{2}{}%
+\contentsline {section}{\numberline {0.4}Implementation for Experimentation}{2}{}%
+\contentsline {section}{\numberline {0.5}Generation of a Sample of Inputs}{2}{}%
+\contentsline {section}{\numberline {0.6}Running the Algorithm Implementation on the Sample Inputs and Recording Results}{2}{}%
+\contentsline {subsection}{\numberline {0.6.1}Experimental Results}{3}{}%
+\contentsline {section}{\numberline {0.7}Analysis of the Experimental Results}{3}{}%
+\contentsline {subsection}{\numberline {0.7.1}Empirical Observation}{3}{}%
+\contentsline {chapter}{\numberline {A}}{4}{}%
+\contentsline {section}{\numberline {A.1}Pseudocode}{4}{}%
+\contentsline {subsection}{\numberline {A.1.1}ToArray}{4}{}%
+\contentsline {subsection}{\numberline {A.1.2}In-Order Traversal}{4}{}%
+\contentsline {section}{\numberline {A.2}Code}{4}{}%
+\contentsline {subsection}{\numberline {A.2.1}ToArray}{4}{}%
+\contentsline {subsection}{\numberline {A.2.2}In-Order Traversal}{5}{}%
+\contentsline {subsection}{\numberline {A.2.3}Testing}{5}{}%

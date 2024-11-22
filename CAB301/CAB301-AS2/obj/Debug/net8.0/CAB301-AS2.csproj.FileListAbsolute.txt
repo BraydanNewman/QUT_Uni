@@ -1,0 +1,14 @@
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.GeneratedMSBuildEditorConfig.editorconfig
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.AssemblyInfoInputs.cache
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.AssemblyInfo.cs
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.csproj.CoreCompileInputs.cache
+/home/braydan/uni/CAB301-AS2/bin/Debug/net8.0/CAB301-AS2
+/home/braydan/uni/CAB301-AS2/bin/Debug/net8.0/CAB301-AS2.deps.json
+/home/braydan/uni/CAB301-AS2/bin/Debug/net8.0/CAB301-AS2.runtimeconfig.json
+/home/braydan/uni/CAB301-AS2/bin/Debug/net8.0/CAB301-AS2.dll
+/home/braydan/uni/CAB301-AS2/bin/Debug/net8.0/CAB301-AS2.pdb
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.dll
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/refint/CAB301-AS2.dll
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.pdb
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/CAB301-AS2.genruntimeconfig.cache
+/home/braydan/uni/CAB301-AS2/obj/Debug/net8.0/ref/CAB301-AS2.dll

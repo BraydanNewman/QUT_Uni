@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage[margin=2cm]{geometry}
+
+
+\begin{document}
+
+\title{CAB301 - Assessment 1}
+\author{Braydan Newman - n11272031}
+\date{}
+\maketitle
+
+\pagebreak 
+
+\tableofcontents{}
+
+\pagebreak 
+
+\section{Introduction}
+The provided algorithm is a method called Add, which adds a new member to a collection (members) while maintaining the collection in sorted a alphabetical order. 
+
+\subsection{Preconditions}
+\begin{itemize}
+\item The member collection is not full.
+\item The member is valid and is not null.
+ 
+\end{itemize}
+
+\subsection{Postconditions}
+\begin{itemize}
+\item The new member is added to member collection and the members in the collection remain in sorted, alphabetical, order by their full name.
+\item No duplicate can be added into the member collection.
+ 
+\end{itemize}
+
+
+\section{Algorithm Analysis}
+
+\subsection{Description}
+The Add method implements a Binary Search algorithm for finding the point at which to add the new member. This is an effective technique when working sorted arrays. This works by dividing the search in half on every iteration. 
+\\\\
+For this implementation, once the binary search has found the position for the new member, this is to keep alphabetical order of all members. All the members after the position is moved once space to the right to make room for the new member in the correct position without overwriting any data. 
+
+\subsection{Flow}
+\begin{enumerate}
+\item If the collection is full, return without adding member.
+\item If the collection is empty, the new member is inserted at index 0, then return.
+\item Perform a binary search to find the correct insertion position for the new member to keep alphabetical order.-
+\item Determine insertion index with binary search.
+\begin{enumerate}
+	\item Compare middle member in collection to new member
+	\item If new member is equal to middle member return without adding. (Dont add duplicate)
+	\item If new member comes before middle member, set middle as new upper bound
+	\item If new member comes after middle member, set middle as new lower bound
+	\item Repeat till lower and upper bound are equal. 
+\end{enumerate}
+\item Shift elements from insertion index to end right one posistion in collection.
+\item Insert new member at insertion index
+
+\end{enumerate}
+
+\begin{algorithm}[H]
+\caption{Add(member)}
+\begin{algorithmic}[1]
+\If {NOT IsFull()}
+1    \If {count = 0} 	\Comment If collection empty add member at start
+        \State $members[count] \gets member$
+        \State $count \gets count + 1$
+        \State \textbf{return}
+    \EndIf
+	\\
+    \State $low \gets 0$
+    \State $high \gets count - 1$
+    \While{$low \leq high$}  \Comment Binary search for insertion index
+        \State $mid \gets low + \frac{(high - low)}{2}$
+        \If {$member = members[mid]$}
+            \State \textbf{return}
+        \ElsIf {$member < members[mid]$}
+            \State $high \gets mid - 1$
+        \ElsIf {$member > members[mid]$}
+            \State $low \gets mid + 1$
+        \EndIf
+    \EndWhile
+	\\
+    \For{$i \gets count$ \textbf{down to} $low + 1$} \Comment Shift members in collection over
+        \State $members[i + 1] \gets members[i]$
+    \EndFor
+    \\
+    \State $members[low] \gets member$ \Comment Add member to collection
+    \State $count \gets count + 1$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Complexity Analysis}
+
+\subsubsection{Time Complexity}
+
+\paragraph{Time complexity Parts:}
+
+\begin{enumerate}
+    \item Binary Search: 
+    \begin{itemize}
+     \item Logarithmic Complexity 
+     \item String Compare Method Complexity assumed constant time (\(O(1)\))
+    \item \( C_{worst}(n) = \sum_{k=1}^{n} 3 \log k + 1 = 3 \sum_{k=1}^{n} \log k + 1  = \log_2 (n+1) \)
+    \item \(C_{worst}(n) = \log_2 (n+1)  \in O(\log n) \)
+    \end{itemize}
+    \item Shifting elements:
+    \begin{itemize}
+   		\item Linear Complexity
+    		\item \( C_{worst}(n) = \sum_{i=1}^{n} 1 = n \in O(n) \)
+    \end{itemize}
+\end{enumerate}
+
+
+\paragraph{Overall Time complexity:}
+\begin{itemize}
+	\item The dominant part of this algorithm is shifting of the elements which takes \(O(n)\) while the search only takes \(O(\log(n)\). Due to the shifting having a higher complexity it is dominate and takes precedence 
+    \item \(O(\log(n) + n) = O(n)\)	
+\end{itemize}
+
+\subsubsection{Space Complexity}
+\begin{itemize}
+\item None of the algorithms change the amount of memory used and it is all done in place; thus, this algorithm has a space complexity of  \(O(1)\), constant space.
+\item \(O(1)\)
+\end{itemize}
+
+\subsection{Efficiency}
+    
+    \begin{itemize}
+		\item The algorithm Efficiency is decent with the search being $O(log(n))$ Time Complexity but due to shiffting being $O(n)$ Time Complexity the overall complexity turn out to be $O(n)$.
+		\item The only way a binary search works is with a sorted list, that is why it is necessary for this approach to have a constantly sorted collection of members.
+    \end{itemize}
+    
+\subsection{Potential Improvements}
+\begin{itemize}
+	\item Using a data structure like a binary tree would make adding to the collection $n(log(n))$, as there is no need for shifting.
+\end{itemize}
+
+
+ 
+
+\end{document}

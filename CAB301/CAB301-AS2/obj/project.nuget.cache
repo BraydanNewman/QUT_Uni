@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8hYtBIGD16oGp3cnvJHsyxbeHozbgPDqnb5UonkHC6Ly2QamXtmI1lF7TBP/L28yWqyTXEjhekWS8eWeONqmAA==",
+  "success": true,
+  "projectFilePath": "/home/braydan/uni/CAB301-AS2/CAB301-AS2.csproj",
+  "expectedPackageFiles": [
+    "/home/braydan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
