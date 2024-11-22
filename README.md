@@ -1,7 +1,3 @@
-# QUT_Uni
+# QUT Uni
 
-## For Everyone Who finds this repo
-
-I can see the amout of people that come to this repo and it's funny
-
-Like The repo if you came here for CAB202
+### Most / some of the assessments and course work over my 3 years at QUT doing the Bachelor of IT (Computer Science)
